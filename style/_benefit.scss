@@ -1,0 +1,42 @@
+.benefit {
+  text-align: center;
+
+  &__image-wrapper {
+    display: inline-block;
+    width: 128px;
+    height: 128px;
+    position: relative;
+    background: #f2f5f4;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-bottom: 24px;
+  }
+
+  &__icon {
+    width: 68px;
+    height: 68px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  &__title {
+    font-family: "Play";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 28px;
+    margin-bottom: 7px;
+  }
+
+  &__desc {
+    padding: 0 4%;
+    font-family: "Play";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    color: #666;
+  }
+}

@@ -1,0 +1,74 @@
+.section {
+  height: 100vh;
+  min-height: 650px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+
+  &::after {
+    content: url("/Beats/img/decor/triangle.svg");
+    position: absolute;
+    bottom: -26px;
+    left: 20.5%;
+  }
+}
+
+.section__title {
+  font-family: "Play";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 52px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.headline {
+  text-align: center;
+
+  &__title {
+    margin-bottom: 18px;
+  }
+
+  &__subtitle {
+    padding: 0 20%;
+    font-family: "Play";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    color: #666666;
+  }
+}
+
+.benefits {
+  display: flex;
+
+  &__item {
+    flex: 1;
+    margin-top: 62px;
+    padding-right: 3%;
+    position: relative;
+
+    &::before {
+      content: url(/Beats/img/decor/sep.png);
+      position: absolute;
+      top: 50px;
+      right: 0;
+      transform: translateX(30%);
+    }
+
+    &:last-child {
+      padding-right: 0;
+
+      &::before {
+        display: none;
+      }
+    }
+  }
+}
+
+.benefits__item::before {
+
+}
