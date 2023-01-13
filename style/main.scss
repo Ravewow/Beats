@@ -1,1 +1,5 @@
-@import url(/beats/style/blocks/_header.scss);
+$containerWidth: 940px;
+
+@import "./base";
+@import "./blocks/header";
+@import "./blocks/hello";
