@@ -246,12 +246,6 @@ header {
           justify-content: center;
   position: relative;
 }
-.section::after {
-  content: url("/Beats/img/decor/triangle.svg");
-  position: absolute;
-  bottom: -26px;
-  left: 20.5%;
-}
 
 .section__title {
   font-family: "Play";
@@ -307,6 +301,13 @@ header {
   display: none;
 }
 
+.section__decor--triangle::after {
+  content: url("/Beats/img/decor/triangle.svg");
+  position: absolute;
+  bottom: -26px;
+  left: 20.5%;
+}
+
 .benefit {
   text-align: center;
 }
@@ -345,4 +346,135 @@ header {
   font-size: 16px;
   line-height: 19px;
   color: #666;
+}
+
+.reviews__section {
+  position: relative;
+}
+.reviews__section::before {
+  content: url("/Beats/img/decor/radial.png");
+  position: absolute;
+  bottom: -26px;
+  left: 22%;
+}
+
+.reviews {
+  margin-top: 32px;
+}
+
+.reviews__display {
+  background: #f8faf9;
+  padding: 42px;
+  margin-bottom: 15px;
+  overflow: hidden;
+  position: relative;
+}
+.reviews__display::before {
+  content: "";
+  display: block;
+  width: 83px;
+  height: 83px;
+  background: #FFF;
+  border-radius: 50%;
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  top: -60px;
+}
+
+.review__display-inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.reviews__avatar {
+  width: 253px;
+  height: 264px;
+}
+.reviews__avatar-img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.reviews__content {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  margin-left: 40px;
+}
+
+.reviews__title {
+  margin-top: 34px;
+  font-family: "Play";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 28px;
+  color: #292929;
+  margin-bottom: 27px;
+}
+
+.reviews__text {
+  width: 498px;
+  margin-bottom: 38px;
+  font-family: "Play";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  color: #666;
+}
+
+.reviews__author {
+  font-family: "Play";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 21px;
+  color: #292929;
+}
+
+.reviews__switcher {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 2px;
+}
+
+.interactive-avatar {
+  width: 74px;
+  height: 74px;
+  border: 4px solid transparent;
+  border-radius: 50%;
+  overflow: hidden;
+  position: relative;
+}
+.interactive-avatar__link {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  display: block;
+}
+.interactive-avatar__img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.interactive-avatar--active {
+  border: 4px solid #e01f3d;
+}
+
+.section__delivery {
+  background: #181818;
 }

@@ -5,13 +5,6 @@
   flex-direction: column;
   justify-content: center;
   position: relative;
-
-  &::after {
-    content: url("/Beats/img/decor/triangle.svg");
-    position: absolute;
-    bottom: -26px;
-    left: 20.5%;
-  }
 }
 
 .section__title {
@@ -69,6 +62,11 @@
   }
 }
 
-.benefits__item::before {
-
+.section__decor--triangle {
+  &::after {
+    content: url("/Beats/img/decor/triangle.svg");
+    position: absolute;
+    bottom: -26px;
+    left: 20.5%;
+  }
 }
