@@ -1,6 +1,12 @@
 .section__delivery {
-  background: #181818;
+  background: url("/Beats/img/section__delivery/bg.png") center bottom / 100%
+      no-repeat,
+    #181818;
   color: #fff;
+}
+
+.section__title--delivery {
+  margin-bottom: 61px;
 }
 
 .form {
@@ -9,7 +15,7 @@
 
 .form__col {
   flex: 1;
-  margin-right: 20px;
+  margin-right: 27px;
 
   &:last-child {
     margin-right: 0;
@@ -18,7 +24,7 @@
 
 .form__row {
   display: flex;
-  margin-bottom: 18px;
+  margin-bottom: 11px;
 }
 
 .form__block {
@@ -40,10 +46,11 @@
   &--textarea {
     height: 152px;
     resize: none;
+    margin-bottom: 23px;
   }
 
   &:focus {
-    border-color: #E01F3D;
+    border-color: #e01f3d;
     outline: none;
   }
 }
@@ -53,4 +60,15 @@
   flex-wrap: wrap;
 }
 
+.radio__title {
+  font-family: "Play";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+}
 
+
+.form__controls--payment {
+  margin-bottom: 20px;
+}

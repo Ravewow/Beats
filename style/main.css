@@ -217,7 +217,7 @@ header {
   padding: 18px 41px;
   background: #e01f3d;
   border-radius: 100px;
-  width: 163px;
+  max-width: 163px;
   color: #fff;
   font-family: "Play";
   font-style: normal;
@@ -233,6 +233,8 @@ header {
 }
 .button--transparent {
   background: transparent;
+  padding: 0;
+  margin-left: 15px;
 }
 .button--transparent:hover {
   background: transparent;
@@ -484,8 +486,12 @@ header {
 }
 
 .section__delivery {
-  background: #181818;
+  background: url("/Beats/img/section__delivery/bg.png") center bottom/100% no-repeat, #181818;
   color: #fff;
+}
+
+.section__title--delivery {
+  margin-bottom: 61px;
 }
 
 .form {
@@ -498,7 +504,7 @@ header {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
-  margin-right: 20px;
+  margin-right: 27px;
 }
 .form__col:last-child {
   margin-right: 0;
@@ -508,7 +514,7 @@ header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin-bottom: 18px;
+  margin-bottom: 11px;
 }
 
 .form__block {
@@ -531,9 +537,10 @@ header {
 .form__input--textarea {
   height: 152px;
   resize: none;
+  margin-bottom: 23px;
 }
 .form__input:focus {
-  border-color: #E01F3D;
+  border-color: #e01f3d;
   outline: none;
 }
 
@@ -545,6 +552,18 @@ header {
       flex-wrap: wrap;
 }
 
+.radio__title {
+  font-family: "Play";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+}
+
+.form__controls--payment {
+  margin-bottom: 20px;
+}
+
 .radio {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -554,6 +573,10 @@ header {
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
+  margin-right: 20px;
+}
+.radio--checkbox {
+  margin-bottom: 46px;
 }
 .radio--checkbox .radio__visible {
   border-radius: 4px;
@@ -575,6 +598,7 @@ header {
   position: relative;
   border-radius: 50%;
   background: #FFF;
+  margin-right: 10px;
 }
 .radio__visible::before {
   content: "";

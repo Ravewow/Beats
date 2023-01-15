@@ -2,8 +2,10 @@
   display: flex;
   cursor: pointer;
   user-select: none;
+  margin-right: 20px;
 
   &--checkbox {
+    margin-bottom: 46px;
     .radio__visible {
       border-radius: 4px;
 
@@ -30,6 +32,7 @@
   position: relative;
   border-radius: 50%;
   background: #FFF;
+  margin-right: 10px;
 
   &::before {
     content: "";

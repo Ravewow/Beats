@@ -2,7 +2,7 @@
   padding: 18px 41px;
   background: #e01f3d;
   border-radius: 100px;
-  width: 163px;
+  max-width: 163px;
   color: #fff;
   font-family: "Play";
   font-style: normal;
@@ -18,6 +18,8 @@
 
   &--transparent {
     background: transparent;
+    padding: 0;
+    margin-left: 15px;
     
     &:hover {
       background: transparent;
