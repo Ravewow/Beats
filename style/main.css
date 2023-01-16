@@ -485,7 +485,7 @@ header {
   border: 4px solid #e01f3d;
 }
 
-.section__delivery {
+.delivery__section {
   background: url("/Beats/img/section__delivery/bg.png") center bottom/100% no-repeat, #181818;
   color: #fff;
 }
