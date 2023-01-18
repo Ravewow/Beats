@@ -3,33 +3,33 @@
   &::before {
     content: url("/Beats/img/decor/radial.png");
     position: absolute;
-    bottom: -26px;
+    bottom: -1.62rem;
     left: 22%;
   }
 }
 
 .reviews {
-  margin-top: 32px;
+  margin-top: 2rem;
 }
 
 .reviews__display {
   background: #f8faf9;
-  padding: 42px;
-  margin-bottom: 15px;
+  padding: 2.62rem;
+  margin-bottom: 1.2rem;
   overflow: hidden;
   position: relative;
 
   &::before {
     content: "";
     display: block;
-    width: 83px;
-    height: 83px;
+    width: 5.18rem;
+    height: 5.18rem;
     background: #FFF;
     border-radius: 50%;
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
-    top: -60px
+    top: -3.75rem;
   }
 }
 
@@ -38,8 +38,8 @@
 }
 
 .reviews__avatar {
-  width: 253px;
-  height: 264px;
+  width: 15.82rem;
+  height: 16rem;
 
   &-img {
     object-fit: cover;
@@ -50,23 +50,23 @@
 
 .reviews__content {
   flex: 1;
-  margin-left: 40px;
+  margin-left: 2.5rem;
 }
 
 .reviews__title {
-  margin-top: 34px;
+  margin-top: 2.125rem;
   font-family: "Play";
   font-style: normal;
   font-weight: 700;
   font-size: 24px;
   line-height: 28px;
   color: #292929;
-  margin-bottom: 27px;
+  margin-bottom: 1.68rem;
 }
 
 .reviews__text {
-  width: 498px;
-  margin-bottom: 38px;
+  width: 31.125rem;
+  margin-bottom: 2.375rem;
   font-family: "Play";
   font-style: normal;
   font-weight: 400;
@@ -87,5 +87,5 @@
 .reviews__switcher {
   display: flex;
   justify-content: center;
-  gap: 2px
+  gap: 0.125rem;
 }

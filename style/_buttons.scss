@@ -1,8 +1,8 @@
 .button {
-  padding: 18px 41px;
+  padding: 1.125rem 2.56rem;
   background: #e01f3d;
-  border-radius: 100px;
-  max-width: 163px;
+  border-radius: 6.25rem;
+  max-width: 10.18rem;
   color: #fff;
   font-family: "Play";
   font-style: normal;
@@ -19,7 +19,7 @@
   &--transparent {
     background: transparent;
     padding: 0;
-    margin-left: 15px;
+    margin-left: 1rem;
     
     &:hover {
       background: transparent;

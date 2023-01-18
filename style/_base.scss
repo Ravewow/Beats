@@ -3,6 +3,10 @@ html {
   height: 100%;
 }
 
+html {
+  font-size: 16px;
+}
+
 body {
   font-size: 16px;
   font-family: "Alegreya Sans", sans-serif;
@@ -15,7 +19,7 @@ body {
 .wrapper {
   position: relative;
   width: 100%;
-  min-width: $containerWidth + 20px;
+  min-width: $containerWidth + 1.25rem;
   min-height: 100%;
   overflow: hidden;
 }

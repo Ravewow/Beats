@@ -1,6 +1,6 @@
 .section {
   height: 100vh;
-  min-height: 650px;
+  min-height: 40.625rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -21,7 +21,7 @@
   text-align: center;
 
   &__title {
-    margin-bottom: 18px;
+    margin-bottom: 1.125rem;
   }
 
   &__subtitle {
@@ -40,14 +40,14 @@
 
   &__item {
     flex: 1;
-    margin-top: 62px;
+    margin-top: 3.875rem;
     padding-right: 3%;
     position: relative;
 
     &::before {
       content: url(/Beats/img/decor/sep.png);
       position: absolute;
-      top: 50px;
+      top: 3.125rem;
       right: 0;
       transform: translateX(30%);
     }
@@ -66,7 +66,7 @@
   &::after {
     content: url("/Beats/img/decor/triangle.svg");
     position: absolute;
-    bottom: -26px;
+    bottom: -1.625rem;
     left: 20.5%;
   }
 }

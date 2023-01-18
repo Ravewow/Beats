@@ -6,7 +6,7 @@
 }
 
 .section__title--delivery {
-  margin-bottom: 61px;
+  margin-bottom: 3.81rem;
 }
 
 .form {
@@ -15,7 +15,7 @@
 
 .form__col {
   flex: 1;
-  margin-right: 27px;
+  margin-right: 1.68rem;
 
   &:last-child {
     margin-right: 0;
@@ -24,12 +24,12 @@
 
 .form__row {
   display: flex;
-  margin-bottom: 11px;
+  margin-bottom: 0.68rem;
 }
 
 .form__block {
   flex: 1;
-  margin-right: 20px;
+  margin-right: 1.25rem;
 
   &:last-child {
     margin-right: 0;
@@ -39,14 +39,14 @@
 .form__input {
   width: 100%;
   border: none;
-  padding: 18px 12px;
+  padding: 1.125rem 0.75rem;
   border: 3px solid transparent;
   border-radius: 4px;
 
   &--textarea {
-    height: 152px;
+    height: 9.5rem;
     resize: none;
-    margin-bottom: 23px;
+    margin-bottom: 1.43rem;
   }
 
   &:focus {
@@ -69,5 +69,5 @@
 }
 
 .form__controls--payment {
-  margin-bottom: 20px;
+  margin-bottom: 1.25rem;
 }
