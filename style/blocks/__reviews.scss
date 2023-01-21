@@ -35,6 +35,11 @@
 
 .review__display-inner {
   display: flex;
+
+  @include tablets {
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 .reviews__avatar {
@@ -46,11 +51,21 @@
     width: 100%;
     height: 100%;
   }
+
+  @include tablets {
+    width: 8.125rem;
+    height: 8.125rem;
+  }
 }
 
 .reviews__content {
   flex: 1;
   margin-left: 2.5rem;
+
+  @include tablets {
+    margin-left: 0;
+    text-align: center;
+  }
 }
 
 .reviews__title {
@@ -62,6 +77,9 @@
   line-height: 28px;
   color: #292929;
   margin-bottom: 1.68rem;
+
+  @include tablets {
+  }
 }
 
 .reviews__text {

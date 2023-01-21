@@ -8,6 +8,10 @@ header {
   &__list {
     display: flex;
     gap: 1.68rem;
+
+    @include tablets {
+      display: none;
+    }
   }
 
   &__item {
@@ -28,6 +32,12 @@ header {
   font-weight: 400;
   font-size: 18px;
   line-height: 18px;
+
+  &--header {
+    @include tablets {
+      display: none;
+    }
+  }
 }
 
 .contact__phone-icon-item {

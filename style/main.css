@@ -1,10 +1,20 @@
+html {
+  font-size: 16px;
+}
+@media screen and (max-width: 768px) {
+  html {
+    font-size: 15px;
+  }
+}
+@media screen and (max-width: 480px) {
+  html {
+    font-size: 14px;
+  }
+}
+
 body,
 html {
   height: 100%;
-}
-
-html {
-  font-size: 16px;
 }
 
 body {
@@ -19,14 +29,14 @@ body {
 .wrapper {
   position: relative;
   width: 100%;
-  min-width: 60rem;
   min-height: 100%;
   overflow: hidden;
 }
 
 .container {
+  max-width: 960px;
   margin: 0 auto;
-  width: 58.75rem;
+  width: 95%;
 }
 
 h1,
@@ -102,6 +112,11 @@ header {
   display: flex;
   gap: 1.68rem;
 }
+@media screen and (max-width: 768px) {
+  .menu__list {
+    display: none;
+  }
+}
 .menu__item {
   font-family: "Alegreya Sans";
   font-style: normal;
@@ -123,6 +138,11 @@ header {
   font-weight: 400;
   font-size: 18px;
   line-height: 18px;
+}
+@media screen and (max-width: 768px) {
+  .contacts__phone--header {
+    display: none;
+  }
 }
 
 .contact__phone-icon-item {
@@ -150,11 +170,24 @@ header {
       -ms-flex-pack: justify;
           justify-content: space-between;
   height: 100%;
-  background: url("/Beats/img/hello/headphones.png") right 6% top 50%/50% auto no-repeat;
   padding: 1.5rem 0 4.375rem 0;
 }
 .hello__content {
-  width: 40%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 10%;
+}
+@media screen and (max-width: 768px) {
+  .hello__content {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
 }
 .hello__title {
   font-family: "Play";
@@ -164,6 +197,11 @@ header {
   line-height: 52px;
   text-transform: uppercase;
 }
+@media screen and (max-width: 768px) {
+  .hello__title {
+    text-align: center;
+  }
+}
 .hello__text {
   width: 20.75rem;
   margin-top: 1.375rem;
@@ -172,6 +210,12 @@ header {
   font-weight: 400;
   font-size: 21px;
   line-height: 25px;
+}
+@media screen and (max-width: 768px) {
+  .hello__text {
+    text-align: center;
+    width: 50%;
+  }
 }
 .hello__icons {
   margin-top: 4.31rem;
@@ -186,6 +230,37 @@ header {
   right: 24.5%;
 }
 
+.hello__content-title {
+  width: 40%;
+}
+@media screen and (max-width: 768px) {
+  .hello__content-title {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .hello__content-img {
+    -webkit-box-ordinal-group: 1;
+        -ms-flex-order: 0;
+            order: 0;
+    width: 20.187rem;
+  }
+}
+
 .features {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -196,6 +271,11 @@ header {
 }
 .features__item:last-child {
   margin-right: 0;
+}
+@media screen and (max-width: 768px) {
+  .features {
+    display: none;
+  }
 }
 
 .feature {
@@ -402,6 +482,17 @@ header {
   display: -ms-flexbox;
   display: flex;
 }
+@media screen and (max-width: 768px) {
+  .review__display-inner {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
 
 .reviews__avatar {
   width: 15.82rem;
@@ -413,12 +504,24 @@ header {
   width: 100%;
   height: 100%;
 }
+@media screen and (max-width: 768px) {
+  .reviews__avatar {
+    width: 8.125rem;
+    height: 8.125rem;
+  }
+}
 
 .reviews__content {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
   margin-left: 2.5rem;
+}
+@media screen and (max-width: 768px) {
+  .reviews__content {
+    margin-left: 0;
+    text-align: center;
+  }
 }
 
 .reviews__title {
@@ -431,7 +534,6 @@ header {
   color: #292929;
   margin-bottom: 1.68rem;
 }
-
 .reviews__text {
   width: 31.125rem;
   margin-bottom: 2.375rem;
@@ -503,6 +605,16 @@ header {
   display: -ms-flexbox;
   display: flex;
 }
+@media screen and (max-width: 768px) {
+  .form {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 60%;
+    margin: 0 auto;
+  }
+}
 
 .form__col {
   -webkit-box-flex: 1;
@@ -512,6 +624,11 @@ header {
 }
 .form__col:last-child {
   margin-right: 0;
+}
+@media screen and (max-width: 768px) {
+  .form__col {
+    margin-right: 0;
+  }
 }
 
 .form__row {
@@ -547,6 +664,11 @@ header {
   border-color: #e01f3d;
   outline: none;
 }
+@media screen and (max-width: 768px) {
+  .form__input {
+    padding: 0.5rem 0.5rem;
+  }
+}
 
 .form__controls {
   display: -webkit-box;
@@ -554,6 +676,17 @@ header {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+}
+
+@media screen and (max-width: 768px) {
+  .form__buttons {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
 }
 
 .radio__title {
@@ -623,6 +756,11 @@ header {
   top: 34%;
   right: 3%;
 }
+@media screen and (max-width: 768px) {
+  .fixed-menu {
+    display: none;
+  }
+}
 
 .fixed-menu__item {
   margin-bottom: 0.312rem;
@@ -654,4 +792,13 @@ header {
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
+}
+
+.header__humburger-item {
+  display: none;
+}
+@media screen and (max-width: 768px) {
+  .header__humburger-item {
+    display: block;
+  }
 }

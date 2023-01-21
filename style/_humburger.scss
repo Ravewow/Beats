@@ -1,0 +1,7 @@
+.header__humburger-item {
+  display: none;
+
+  @include tablets {
+    display: block;
+  }
+}

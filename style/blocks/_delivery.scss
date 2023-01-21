@@ -11,6 +11,12 @@
 
 .form {
   display: flex;
+
+  @include tablets {
+    flex-direction: column;
+    width: 60%;
+    margin: 0 auto;
+  }
 }
 
 .form__col {
@@ -20,6 +26,11 @@
   &:last-child {
     margin-right: 0;
   }
+
+  @include tablets {
+    margin-right: 0;
+  }
+
 }
 
 .form__row {
@@ -53,11 +64,22 @@
     border-color: #e01f3d;
     outline: none;
   }
+
+  @include tablets {
+    padding: 0.5rem 0.5rem;
+  }
 }
 
 .form__controls {
   display: flex;
   flex-wrap: wrap;
+}
+
+.form__buttons {
+  @include tablets {
+    display: flex;
+    justify-content: center;
+  }
 }
 
 .radio__title {

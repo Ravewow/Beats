@@ -10,12 +10,17 @@
     flex-direction: column;
     justify-content: space-between;
     height: 100%;
-    background: url("/Beats/img/hello/headphones.png") right 6% top 50% /50% auto no-repeat;
     padding: 1.5rem 0 4.375rem 0;
   }
 
   &__content {
-    width: 40%;
+    display: flex;
+    align-items: center;
+    gap: 10%;
+
+    @include tablets {
+      flex-direction: column;
+    }
   }
 
   &__title {
@@ -25,6 +30,10 @@
     font-size: 48px;
     line-height: 52px;
     text-transform: uppercase;
+
+    @include tablets {
+      text-align: center;
+    }
   }
 
   &__text {
@@ -35,6 +44,11 @@
     font-weight: 400;
     font-size: 21px;
     line-height: 25px;
+
+    @include tablets {
+      text-align: center;
+      width: 50%;
+    }
   }
 
   &__icons {
@@ -53,6 +67,27 @@
   }
 }
 
+.hello__content-title {
+  width: 40%;
+  
+  @include tablets {
+    order: 1;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.hello__content-img {
+  @include tablets {
+    order: 0;
+    width: 20.187rem;
+  }
+}
+
+
+
 .features {
   display: flex;
 
@@ -62,6 +97,10 @@
     &:last-child {
       margin-right: 0;
     }
+  }
+
+  @include tablets {
+    display: none;
   }
 }
 
