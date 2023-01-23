@@ -67,14 +67,12 @@ header {
 
 .contact__phone-icon {
   flex-shrink: 0;
-  max-width: 14px;
-  max-height: 14px;
 }
 
-.contact__phone-icon-item {
-  width: 0.81rem;
-  height: 0.81rem;
-  margin-right: 0.375rem;
+.phone__icon {
+  max-width: 14px;
+  max-height: 14px;
+  margin-right: 6px;
 }
 
 .header__humburger-item {
