@@ -1,5 +1,6 @@
 .reviews__section {
   position: relative;
+
   &::before {
     content: url("/Beats/img/decor/radial.png");
     position: absolute;
@@ -18,6 +19,14 @@
   margin-bottom: 1.2rem;
   overflow: hidden;
   position: relative;
+
+  @include tablets {
+    margin-bottom: 2rem;
+  }
+
+  @include phones {
+    margin-bottom: 3.5rem;
+  }
 
   &::before {
     content: "";
@@ -53,8 +62,9 @@
   }
 
   @include tablets {
-    width: 8.125rem;
-    height: 8.125rem;
+    width: 8.5rem;
+    height: 8.5rem;
+    margin-top: 19px;
   }
 }
 
@@ -76,21 +86,26 @@
   font-size: 24px;
   line-height: 28px;
   color: #292929;
-  margin-bottom: 1.68rem;
 
   @include tablets {
+    margin-top: 2.5rem;
   }
 }
 
 .reviews__text {
   width: 31.125rem;
-  margin-bottom: 2.375rem;
+  margin-top: 1.6rem;
   font-family: "Play";
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
   line-height: 19px;
   color: #666;
+
+  @include tablets {
+    margin-top: 1.1rem;
+    width: 100%;
+  }
 }
 
 .reviews__author {
@@ -100,6 +115,10 @@
   font-size: 18px;
   line-height: 21px;
   color: #292929;
+
+  @include tablets {
+    margin-top: 1rem;
+  }
 }
 
 .reviews__switcher {

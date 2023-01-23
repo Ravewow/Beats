@@ -7,6 +7,14 @@
 
 .section__title--delivery {
   margin-bottom: 3.81rem;
+
+  @include tablets {
+    margin-bottom: 2rem;
+  }
+
+  @include phones {
+    margin-bottom: 2.8rem;
+  }
 }
 
 .form {
@@ -14,8 +22,11 @@
 
   @include tablets {
     flex-direction: column;
-    width: 60%;
-    margin: 0 auto;
+    padding: 0 16%;
+  }
+
+  @include phones {
+    padding: 0;
   }
 }
 
@@ -58,6 +69,10 @@
     height: 9.5rem;
     resize: none;
     margin-bottom: 1.43rem;
+
+    @include tablets {
+      height: 5.5rem;
+    }
   }
 
   &:focus {
@@ -73,6 +88,10 @@
 .form__controls {
   display: flex;
   flex-wrap: wrap;
+
+  @include phones {
+    justify-content: center;
+  }
 }
 
 .form__buttons {

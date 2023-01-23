@@ -15,6 +15,11 @@
   line-height: 52px;
   text-transform: uppercase;
   text-align: center;
+
+  @include phones {
+    font-size: 32px;
+    line-height: 36px;
+  }
 }
 
 .headline {
@@ -32,11 +37,20 @@
     font-size: 16px;
     line-height: 19px;
     color: #666666;
+
+    @include phones {
+      padding: 0;
+      margin-top: 5px;
+    }
   }
 }
 
 .benefits {
   display: flex;
+
+  @include phones {
+    flex-direction: column;
+  }
 
   &__item {
     flex: 1;
@@ -44,12 +58,20 @@
     padding-right: 3%;
     position: relative;
 
+    @include phones {
+      padding-right: 0;
+    }
+
     &::before {
       content: url(/Beats/img/decor/sep.png);
       position: absolute;
       top: 3.125rem;
       right: 0;
       transform: translateX(30%);
+
+      @include tablets {
+        display: none;
+      }
     }
 
     &:last-child {
@@ -64,7 +86,7 @@
 
 .section__decor--triangle {
   &::after {
-    content: url("/Beats/img/decor/triangle.svg");
+    content: url("/Beats/img/decor/triangle.png");
     position: absolute;
     bottom: -1.625rem;
     left: 20.5%;
