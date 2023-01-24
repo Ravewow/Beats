@@ -165,6 +165,16 @@ header {
   line-height: 18px;
   white-space: nowrap;
   padding: 10px 0;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+.contacts__phone:hover {
+  color: #E01F3D;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+.contacts__phone:hover .phone__icon {
+  fill: #E01F3D;
 }
 @media screen and (max-width: 768px) {
   .contacts__phone--header {
@@ -181,6 +191,8 @@ header {
   max-width: 14px;
   max-height: 14px;
   margin-right: 6px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 
 .header__humburger-item {
@@ -984,5 +996,93 @@ header {
 @media screen and (max-width: 768px) {
   .header__humburger-item {
     display: block;
+  }
+}
+
+.map__section {
+  background: url("/Beats/img/section__contacts/map.jpg") top center/cover no-repeat;
+  position: relative;
+}
+
+.footer__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 5.37rem;
+}
+@media screen and (max-width: 480px) {
+  .footer__container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    height: 9.43rem;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+.footer {
+  position: absolute;
+  background: #fff;
+  bottom: 0;
+}
+@media screen and (max-width: 480px) {
+  .footer {
+    padding-top: 20px;
+    padding-bottom: 31px;
+  }
+}
+
+.social__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.social__item {
+  margin-right: 0.5rem;
+}
+.social__item:last-child {
+  margin-right: 0;
+}
+
+.social__icon {
+  width: 30px;
+  height: 30px;
+  fill: #b3b3b3;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+.social__icon:hover {
+  fill: #000;
+}
+
+.cotnacts__address {
+  font-family: "Play";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 24px;
+}
+@media screen and (max-width: 480px) {
+  .cotnacts__address {
+    margin-bottom: 12px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .contacts__phone--footer {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-bottom: 19px;
   }
 }

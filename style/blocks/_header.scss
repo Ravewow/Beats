@@ -57,6 +57,15 @@ header {
   line-height: 18px;
   white-space: nowrap;
   padding: 10px 0;
+  transition: 0.5s;
+
+  &:hover {
+    color: #E01F3D;
+    transition: 0.5s;
+    .phone__icon {
+      fill: #E01F3D;
+    }
+  }
 
   &--header {
     @include tablets {
@@ -64,6 +73,7 @@ header {
     }
   }
 }
+
 
 .contact__phone-icon {
   flex-shrink: 0;
@@ -73,6 +83,7 @@ header {
   max-width: 14px;
   max-height: 14px;
   margin-right: 6px;
+  transition: 0.5s;
 }
 
 .header__humburger-item {
