@@ -1124,6 +1124,7 @@ header {
 }
 
 .slider__list-wrapper {
+  max-width: 43.75rem;
   overflow: hidden;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1162,6 +1163,15 @@ header {
   height: 2rem;
 }
 
+.slider__item {
+  max-width: 43.75rem;
+}
+@media screen and (max-width: 480px) {
+  .slider__item {
+    max-width: 31rem;
+  }
+}
+
 .slide {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1183,7 +1193,7 @@ header {
 }
 
 .slide__img-wrapper {
-  max-width: 45%;
+  width: 45%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

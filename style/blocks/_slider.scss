@@ -10,7 +10,7 @@
 }
 
 .slider__list-wrapper {
-  // width: rem(700px);
+  max-width: rem(700px);
   overflow: hidden;
   display: flex;
 }
@@ -47,14 +47,14 @@
   height: rem(32px);
 }
 
-// .slider__item  {
-//   width: rem(700px);
+.slider__item  {
+  max-width: rem(700px);
 
-//   @include phones {
-//     width: 31rem;
-//   }
+  @include phones {
+    max-width: 31rem;
+  }
 
-// }
+}
 
 .slide {
   display: flex; 
@@ -67,7 +67,7 @@
 }
 
 .slide__img-wrapper {
-  max-width: 45%;
+  width: 45%;
   display: flex;
   align-items: center;
   
