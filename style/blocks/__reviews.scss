@@ -42,8 +42,21 @@
   }
 }
 
-.review__display-inner {
+.reviews__display-inner {
   display: flex;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  opacity: 0;
+  transition: 0.4s;
+  
+  &--active {
+    position: static;
+    opacity: 1;
+    transition: 0.4s;
+  }
 
   @include tablets {
     flex-direction: column;
@@ -115,9 +128,10 @@
   font-size: 18px;
   line-height: 21px;
   color: #292929;
+  margin-top: 1rem;
 
   @include tablets {
-    margin-top: 1rem;
+    margin-top: 2rem;
   }
 }
 

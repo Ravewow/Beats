@@ -2,11 +2,15 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 5.37rem;
+  height: rem(86px);
+
+  @include tablets {
+    height: 7rem;
+  }
 
   @include phones {
     flex-direction: column;
-    height: 9.43rem;
+    height: rem(151px);
     justify-content: center;
   }
 }
