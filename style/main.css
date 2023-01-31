@@ -1004,6 +1004,58 @@ header {
           transform: translate(-50%, -50%);
 }
 
+.hamburger__menu {
+  display: none;
+}
+@media screen and (max-width: 768px) {
+  .hamburger__menu {
+    background: #313131;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+}
+
+.hamburger__visible {
+  display: block;
+}
+
+.humburger__header {
+  height: 80px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.humburger__header-icon {
+  width: 20px;
+  height: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-left: 10px;
+}
+
+.hamburger__menu-list {
+  text-align: center;
+  margin-top: 8.4375rem;
+}
+.hamburger__menu-list .menu__item {
+  color: #ffffff;
+  font-family: "Play";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 72px;
+}
+
 .header__humburger-item {
   display: none;
 }
