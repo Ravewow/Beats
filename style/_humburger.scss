@@ -16,7 +16,7 @@
 }
 
 .humburger__header {
-  height: 80px;
+  height: rem(80px);
   display: flex;
   justify-content: end;
   align-items: center;
@@ -31,8 +31,8 @@
 
 
 .hamburger__menu-list {
-  text-align: center;
-  margin-top: 20%;
+  margin-top: 15%;
+
   .menu__item {
     color: #ffffff;
     font-family: "Play";
@@ -40,6 +40,9 @@
     font-weight: 400;
     font-size: 36px;
     line-height: 72px;
+    display: flex;
+    justify-content: center;
+    margin-right: 0;
   }
 }
 

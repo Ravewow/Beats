@@ -1023,7 +1023,7 @@ header {
 }
 
 .humburger__header {
-  height: 80px;
+  height: 5rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1044,8 +1044,7 @@ header {
 }
 
 .hamburger__menu-list {
-  text-align: center;
-  margin-top: 20%;
+  margin-top: 15%;
 }
 .hamburger__menu-list .menu__item {
   color: #ffffff;
@@ -1054,6 +1053,13 @@ header {
   font-weight: 400;
   font-size: 36px;
   line-height: 72px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-right: 0;
 }
 
 .header__humburger-item {
