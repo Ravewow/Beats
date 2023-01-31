@@ -9,3 +9,7 @@ headerHamburger.addEventListener("click", e => {
 closeMenu.addEventListener("click", e => {
   hamburgerMenu.classList.remove("hamburger__visible")
 })
+
+headerHamburger.addEventListener("click", e => {
+  e.preventDefault();
+})
