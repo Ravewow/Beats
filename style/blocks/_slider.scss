@@ -10,7 +10,7 @@
 }
 
 .slider__list-wrapper {
-  max-width: rem(700px);
+  max-width: rem(850px);
   overflow: hidden;
   display: flex;
 }
@@ -48,7 +48,7 @@
 }
 
 .slider__item  {
-  max-width: rem(700px);
+  max-width: rem(850px);
 
   @include phones {
     max-width: 31rem;
@@ -72,12 +72,12 @@
   align-items: center;
   
   @include tablets {
-    max-width: 20rem;
+    max-width: 21rem;
     margin-bottom: rem(30px);
   }
 
   @include phones {
-    max-width: 20rem;
+    max-width: 21rem;
     margin-bottom: 26px;
   }
 }

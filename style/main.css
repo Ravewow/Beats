@@ -1124,7 +1124,7 @@ header {
 }
 
 .slider__list-wrapper {
-  max-width: 43.75rem;
+  max-width: 53.125rem;
   overflow: hidden;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1164,7 +1164,7 @@ header {
 }
 
 .slider__item {
-  max-width: 43.75rem;
+  max-width: 53.125rem;
 }
 @media screen and (max-width: 480px) {
   .slider__item {
@@ -1203,13 +1203,13 @@ header {
 }
 @media screen and (max-width: 768px) {
   .slide__img-wrapper {
-    max-width: 20rem;
+    max-width: 21rem;
     margin-bottom: 1.875rem;
   }
 }
 @media screen and (max-width: 480px) {
   .slide__img-wrapper {
-    max-width: 20rem;
+    max-width: 21rem;
     margin-bottom: 26px;
   }
 }
@@ -1375,4 +1375,65 @@ header {
 
 .slide__button {
   text-transform: uppercase;
+}
+
+.dropdown {
+  position: relative;
+}
+.dropdown:hover .dropdown__menu {
+  top: 0;
+  left: 100%;
+  opacity: 1;
+}
+
+.dropdown__menu {
+  position: absolute;
+  background: rgba(255, 255, 255, 0.8);
+  -webkit-backdrop-filter: blur(20px);
+          backdrop-filter: blur(20px);
+  -webkit-box-shadow: 4px 4px 40px rgba(0, 0, 0, 0.06);
+          box-shadow: 4px 4px 40px rgba(0, 0, 0, 0.06);
+  border-radius: 4px;
+  width: 17.0625rem;
+  height: 18.375rem;
+  padding: 28px 25px 34px 32px;
+  right: -9999px;
+  opacity: 0;
+  -webkit-transition: opacity 0.3s;
+  transition: opacity 0.3s;
+}
+
+.dropdown__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: "Play";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #000000;
+  margin-bottom: 1.1875rem;
+}
+.dropdown__item:last-child {
+  margin-bottom: 0;
+}
+
+.dropdown__item-icon {
+  width: 2rem;
+  height: 2rem;
+}
+
+.dropdown__item-text {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-left: 1.5625rem;
 }
