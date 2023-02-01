@@ -1,5 +1,9 @@
 .team__list {
   display: flex;
+  @include tablets  {
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 .team__title-item {
@@ -19,6 +23,18 @@
 
   &__img-wrapper {
     margin-bottom: rem(25px);
+  }
+
+  &__img {
+    @include tablets {
+      display: none;
+    }
+  }
+
+  &__description {
+    // transition: 0.3s;
+    display: none;
+    overflow: hidden;
   }
 
   &__name {
@@ -51,4 +67,23 @@
     text-align: center;
     color: #666666;
   }
+}
+
+.portfolio__description--active {
+  height: 100%;
+}
+
+.portfolio__name-wrapper {
+  display: flex;
+  align-items: baseline;
+}
+
+.portfolio__name-triangle {
+  width: 9px;
+  height: 7px;
+  margin-left: 4px;
+}
+
+.portfolio__name-triangle--rotate {
+  transform: rotate(180deg);
 }

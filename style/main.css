@@ -1501,6 +1501,17 @@ header {
   display: -ms-flexbox;
   display: flex;
 }
+@media screen and (max-width: 768px) {
+  .team__list {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
 
 .team__title-item {
   margin-bottom: 3.3125rem;
@@ -1525,6 +1536,15 @@ header {
 }
 .portfolio__img-wrapper {
   margin-bottom: 1.5625rem;
+}
+@media screen and (max-width: 768px) {
+  .portfolio__img {
+    display: none;
+  }
+}
+.portfolio__description {
+  display: none;
+  overflow: hidden;
 }
 .portfolio__name {
   font-family: "Play";
@@ -1553,4 +1573,28 @@ header {
   line-height: 19px;
   text-align: center;
   color: #666666;
+}
+
+.portfolio__description--active {
+  height: 100%;
+}
+
+.portfolio__name-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+}
+
+.portfolio__name-triangle {
+  width: 9px;
+  height: 7px;
+  margin-left: 4px;
+}
+
+.portfolio__name-triangle--rotate {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
 }
