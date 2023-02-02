@@ -5,8 +5,9 @@ $(document).ready(() => {
     elem.slideToggle();
   });
 
-  $(".portfolio__name").on("click", function(e) {
+  $(".portfolio__name").on("click", function (e) {
     let elem = $(e.currentTarget).next();
-    elem.toggleClass("portfolio__name-triangle--rotate")
-  })
+    elem.toggleClass("portfolio__name-triangle--rotate");
+  });
+ 
 });

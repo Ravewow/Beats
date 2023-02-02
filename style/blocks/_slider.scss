@@ -23,9 +23,11 @@
 
 .slider__arrow {
   top: 50%;
-  position: absolute;
+  width: 5%;
+  
 
   @include tablets {
+    position: absolute;
     top: 25%;
   }
   
@@ -39,12 +41,13 @@
 
   &--right {
     right: 0;
+    text-align: end;
   }
 }
 
 .slider__arrow-icon {
-  width: rem(24px);
-  height: rem(32px);
+  width: rem(16px);
+  height: rem(31px);
 }
 
 .slider__item  {
@@ -99,6 +102,7 @@
   justify-content: center;
   align-items: center;
   margin-bottom: rem(25px);
+  cursor: pointer;
 
   @include tablets {
     display: none;
@@ -141,7 +145,7 @@
 }
 
 .slide__descripton {
-  width: rem(368px);
+  width: 100%;
   font-family: "Play";
   font-style: normal;
   font-weight: 400;

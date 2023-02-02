@@ -17,24 +17,32 @@
   max-width: rem(220px);
   margin-right: rem(20px);
 
+  @include tablets {
+    margin-right: 0;
+  }
+
   &:last-child {
     margin-right: 0;
   }
 
   &__img-wrapper {
     margin-bottom: rem(25px);
-  }
 
-  &__img {
     @include tablets {
+      margin-right: 0;
+      order: 10;
       display: none;
     }
   }
 
   &__description {
-    // transition: 0.3s;
     display: none;
     overflow: hidden;
+
+    @include tablets {
+      order: 20;
+      margin-bottom: rem(14px);
+    }
   }
 
   &__name {
@@ -45,6 +53,7 @@
     line-height: 21px;
     color: #292929;
     margin-bottom: rem(11px);
+    cursor: pointer;
   }
 
   &__career {
@@ -69,9 +78,6 @@
   }
 }
 
-.portfolio__description--active {
-  height: 100%;
-}
 
 .portfolio__name-wrapper {
   display: flex;

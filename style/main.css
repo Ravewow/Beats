@@ -1199,10 +1199,11 @@ header {
 
 .slider__arrow {
   top: 50%;
-  position: absolute;
+  width: 5%;
 }
 @media screen and (max-width: 768px) {
   .slider__arrow {
+    position: absolute;
     top: 25%;
   }
 }
@@ -1214,11 +1215,12 @@ header {
 }
 .slider__arrow--right {
   right: 0;
+  text-align: end;
 }
 
 .slider__arrow-icon {
-  width: 1.5rem;
-  height: 2rem;
+  width: 1rem;
+  height: 1.9375rem;
 }
 
 .slider__item {
@@ -1296,6 +1298,7 @@ header {
       -ms-flex-align: center;
           align-items: center;
   margin-bottom: 1.5625rem;
+  cursor: pointer;
 }
 @media screen and (max-width: 768px) {
   .slide__parameter-img-wrapper {
@@ -1344,7 +1347,7 @@ header {
 }
 
 .slide__descripton {
-  width: 23rem;
+  width: 100%;
   font-family: "Play";
   font-style: normal;
   font-weight: 400;
@@ -1531,6 +1534,11 @@ header {
   max-width: 13.75rem;
   margin-right: 1.25rem;
 }
+@media screen and (max-width: 768px) {
+  .portfolio {
+    margin-right: 0;
+  }
+}
 .portfolio:last-child {
   margin-right: 0;
 }
@@ -1538,13 +1546,25 @@ header {
   margin-bottom: 1.5625rem;
 }
 @media screen and (max-width: 768px) {
-  .portfolio__img {
+  .portfolio__img-wrapper {
+    margin-right: 0;
+    -webkit-box-ordinal-group: 11;
+        -ms-flex-order: 10;
+            order: 10;
     display: none;
   }
 }
 .portfolio__description {
   display: none;
   overflow: hidden;
+}
+@media screen and (max-width: 768px) {
+  .portfolio__description {
+    -webkit-box-ordinal-group: 21;
+        -ms-flex-order: 20;
+            order: 20;
+    margin-bottom: 0.875rem;
+  }
 }
 .portfolio__name {
   font-family: "Play";
@@ -1554,6 +1574,7 @@ header {
   line-height: 21px;
   color: #292929;
   margin-bottom: 0.6875rem;
+  cursor: pointer;
 }
 .portfolio__career {
   font-family: "Play";
@@ -1573,10 +1594,6 @@ header {
   line-height: 19px;
   text-align: center;
   color: #666666;
-}
-
-.portfolio__description--active {
-  height: 100%;
 }
 
 .portfolio__name-wrapper {
