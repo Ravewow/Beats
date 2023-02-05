@@ -1205,6 +1205,7 @@ header {
 .slider__arrow {
   top: 50%;
   width: 5%;
+  cursor: pointer;
 }
 @media screen and (max-width: 768px) {
   .slider__arrow {
@@ -1212,15 +1213,15 @@ header {
     top: 15%;
   }
 }
-.slider__arrow:hover {
-  cursor: pointer;
-}
 .slider__arrow--left {
   left: 0;
+  -webkit-box-ordinal-group: -9;
+      -ms-flex-order: -10;
+          order: -10;
 }
 .slider__arrow--right {
   right: 0;
-  text-align: center;
+  text-align: right;
 }
 
 .slider__arrow-icon {

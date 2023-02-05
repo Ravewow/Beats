@@ -23,11 +23,12 @@ const slider = $(".slider__list").bxSlider({
   controls: false,
 });
 
-$(".slider__arrow--left").click(e => {
-  slider.goToPrevSlide();
-});
-$(".slider__arrow--right").click(e => {
+$(".slider__arrow--right").click((e) => {
   slider.goToNextSlide();
+});
+
+$(".slider__arrow--left").click((e) => {
+  slider.goToPrevSlide();
 });
 
 // team Animation

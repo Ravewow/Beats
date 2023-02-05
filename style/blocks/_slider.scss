@@ -29,23 +29,21 @@
 .slider__arrow {
   top: 50%;
   width: 5%;
+  cursor: pointer;
 
   @include tablets {
     position: absolute;
     top: 15%;
   }
 
-  &:hover {
-    cursor: pointer;
-  }
-
   &--left {
     left: 0;
+    order: -10;
   }
 
   &--right {
     right: 0;
-    text-align: center;
+    text-align: right;
   }
 }
 
