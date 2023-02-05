@@ -13,7 +13,9 @@
   @include phones {
     padding: 1.5rem 0;
     text-align: center;
-    width: 12rem;
+    max-width: 12rem;
+    max-height: rem(65px);
+    flex: 1;
   }
 
   &:hover {

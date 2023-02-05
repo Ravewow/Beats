@@ -19,6 +19,7 @@
   margin-bottom: 1.2rem;
   overflow: hidden;
   position: relative;
+  min-height: rem(348px);
 
   @include tablets {
     margin-bottom: 2rem;
@@ -50,12 +51,11 @@
   bottom: 0;
   right: 0;
   opacity: 0;
-  transition: 0.4s;
   
   &--active {
     position: static;
     opacity: 1;
-    transition: 0.4s;
+    pointer-events: unset;
   }
 
   @include tablets {

@@ -1,8 +1,8 @@
-.team__list {
+.team--version--desktop {
   display: flex;
-  @include tablets  {
-    flex-direction: column;
-    align-items: center;
+
+  @include tablets {
+    display: none;
   }
 }
 
@@ -14,8 +14,10 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  max-width: rem(220px);
+  min-width: rem(220px);
   margin-right: rem(20px);
+  flex-wrap: wrap;
+  position: relative;
 
   @include tablets {
     margin-right: 0;
@@ -30,17 +32,18 @@
 
     @include tablets {
       margin-right: 0;
-      order: 10;
-      display: none;
+      display: flex;
+      justify-content: center;
     }
   }
 
   &__description {
-    display: none;
+    height: 0;
     overflow: hidden;
+    top: 100%;
+    transition: 0.4s;
 
     @include tablets {
-      order: 20;
       margin-bottom: rem(14px);
     }
   }
@@ -78,7 +81,6 @@
   }
 }
 
-
 .portfolio__name-wrapper {
   display: flex;
   align-items: baseline;
@@ -92,4 +94,18 @@
 
 .portfolio__name-triangle--rotate {
   transform: rotate(180deg);
+}
+
+.team--version--mobile {
+  display: none;
+
+  @include tablets {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.team--version--desktop .portfolio__description {
+  position: absolute;
 }

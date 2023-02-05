@@ -11,6 +11,7 @@
     href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@400;700&family=Open+Sans&family=Play:wght@400;700&display=swap"
     rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
   <link rel="stylesheet" href="/Beats/style/main.css">
   <title>Beats</title>
 </head>
@@ -260,17 +261,65 @@
                   </div>
                 </div>
               </li>
-              <!-- <li class="slider__item slide">
+              <li class="slider__item slide">
                 <div class="slide__img-wrapper">
-                  <img src="./img/slider/beats__solo__pro.png" alt="Наушники Beats Solo Pro"
-                    class="slide__headphones-img">
+                  <img src="./img/slider/beats__solo__pro.png" alt="Наушники Beats Pro" class="slide__headphones-img">
                 </div>
                 <div class="slide__content">
                   <div class="slide__parameter">
-                    <div class="slide__parameter-img-wrapper">
+                    <div class="slide__parameter-img-wrapper dropdown">
                       <svg class="slide__parameter-img">
                         <use xlink:href="./img/sprite.svg#gear"></use>
                       </svg>
+                      <div class="dropdown__menu">
+                        <ul class="dropdown__list">
+                          <li class="dropdown__item">
+                            <svg class="dropdown__item-icon">
+                              <use xlink:href="./img/sprite.svg#bt"></use>
+                            </svg>
+                            <div class="dropdown__item-text">
+                              <p>Bluetooth</p>
+                              <p>4.0</p>
+                            </div>
+                          </li>
+                          <li class="dropdown__item">
+                            <svg class="dropdown__item-icon">
+                              <use xlink:href="./img/sprite.svg#road"></use>
+                            </svg>
+                            <div class="dropdown__item-text">
+                              <p>Дальность</p>
+                              <p>10 м</p>
+                            </div>
+                          </li>
+                          <li class="dropdown__item">
+                            <svg class="dropdown__item-icon">
+                              <use xlink:href="./img/sprite.svg#charger"></use>
+                            </svg>
+                            <div class="dropdown__item-text">
+                              <p>Зарядка</p>
+                              <p>2 ч</p>
+                            </div>
+                          </li>
+                          <li class="dropdown__item">
+                            <svg class="dropdown__item-icon">
+                              <use xlink:href="./img/sprite.svg#kg"></use>
+                            </svg>
+                            <div class="dropdown__item-text">
+                              <p>Вес</p>
+                              <p>215гр</p>
+                            </div>
+                          </li>
+                          <li class="dropdown__item">
+                            <svg class="dropdown__item-icon">
+                              <use xlink:href="./img/sprite.svg#patent"></use>
+                            </svg>
+                            <div class="dropdown__item-text">
+                              <p>Гарантия</p>
+                              <p>1 год</p>
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
                     </div>
                     <div class="slide__title-wrapper">
                       <h3 class="h3 slide__title">beats solo pro. цвет «красный цитрус»</h3>
@@ -297,7 +346,7 @@
                     </div>
                   </div>
                 </div>
-              </li> -->
+              </li>
             </ul>
           </div>
           <div class="slider__arrow slider__arrow--right">
@@ -312,7 +361,7 @@
           <div class="team__title">
             <h2 class="h2 team__title-item section__title">команда</h2>
           </div>
-          <ul class="team__list">
+          <ul class="team__list team--version--desktop">
             <li class="team__item portfolio">
               <div class="portfolio__img-wrapper">
                 <img src="/Beats/img/team__section/1.jpeg" alt="Мужчина в голубой рубашке" class="portfolio__img">
@@ -321,12 +370,14 @@
                 <h4 class="h4 portfolio__name">Борис Федорович</h4>
                 <img src="./img/team__section/triangle.png" alt="" class="portfolio__name-triangle">
               </div>
-              
+
               <div class="portfolio__description">
-                <h5 class="h5 portfolio__career">Главный технолог</h5>
-                <p class="portfolio__info">Отвечает за вкусовые качества 
-                  и калорийность.                                    
-                </p>
+                <div class="portfolio__description-block">
+                  <h5 class="h5 portfolio__career">Главный технолог</h5>
+                  <p class="portfolio__info">Отвечает за вкусовые качества
+                    и калорийность.
+                  </p>
+                </div>
               </div>
             </li>
             <li class="team__item portfolio">
@@ -337,12 +388,14 @@
                 <h4 class="h4 portfolio__name">Алла Иванова</h4>
                 <img src="./img/team__section/triangle.png" alt="" class="portfolio__name-triangle">
               </div>
-              
+
               <div class="portfolio__description">
-                <h5 class="h5 portfolio__career">Специалист по упаковке</h5>
-                <p class="portfolio__info">Автор запоминающегося стиля 
-                  наших батончиков.                                   
-                </p>
+                <div class="portfolio__description-block">
+                  <h5 class="h5 portfolio__career">Специалист по упаковке</h5>
+                  <p class="portfolio__info">Автор запоминающегося стиля
+                    наших батончиков.
+                  </p>
+                </div>
               </div>
             </li>
             <li class="team__item portfolio">
@@ -353,12 +406,14 @@
                 <h4 class="h4 portfolio__name">Кирилл Матросов</h4>
                 <img src="./img/team__section/triangle.png" alt="" class="portfolio__name-triangle">
               </div>
-              
+
               <div class="portfolio__description">
-                <h5 class="h5 portfolio__career">Оператор</h5>
-                <p class="portfolio__info">Разработал дизан
-                  наушников beats solo 3.                 
-                </p>
+                <div class="portfolio__description-block">
+                  <h5 class="h5 portfolio__career">Оператор</h5>
+                  <p class="portfolio__info">Разработал дизан
+                    наушников beats solo 3.
+                  </p>
+                </div>
               </div>
             </li>
             <li class="team__item portfolio">
@@ -369,12 +424,92 @@
                 <h4 class="h4 portfolio__name">Мила Рыжкова</h4>
                 <img src="./img/team__section/triangle.png" alt="" class="portfolio__name-triangle">
               </div>
-              
+
               <div class="portfolio__description">
-                <h5 class="h5 portfolio__career">PR, маркетинг</h5>
-                <p class="portfolio__info">По всем вопросам сотрудничества 
-                  и рекламы писать только Миле.                  
-                </p>
+                <div class="portfolio__description-block">
+                  <h5 class="h5 portfolio__career">PR, маркетинг</h5>
+                  <p class="portfolio__info">По всем вопросам сотрудничества
+                    и рекламы писать только Миле.
+                  </p>
+                </div>
+              </div>
+            </li>
+          </ul>
+          <ul class="team__list team--version--mobile">
+            <li class="team__item portfolio">
+
+              <div class="portfolio__name-wrapper">
+                <h4 class="h4 portfolio__name">Борис Федорович</h4>
+                <img src="./img/team__section/triangle.png" alt="" class="portfolio__name-triangle">
+              </div>
+
+              <div class="portfolio__description">
+                <div class="portfolio__description-block">
+                  <div class="portfolio__img-wrapper">
+                    <img src="/Beats/img/team__section/1.jpeg" alt="Мужчина в голубой рубашке" class="portfolio__img">
+                  </div>
+                  <h5 class="h5 portfolio__career">Главный технолог</h5>
+                  <p class="portfolio__info">Отвечает за вкусовые качества
+                    и калорийность.
+                  </p>
+                </div>
+              </div>
+            </li>
+            <li class="team__item portfolio">
+
+              <div class="portfolio__name-wrapper">
+                <h4 class="h4 portfolio__name">Алла Иванова</h4>
+                <img src="./img/team__section/triangle.png" alt="" class="portfolio__name-triangle">
+              </div>
+
+              <div class="portfolio__description">
+                <div class="portfolio__description-block">
+                  <div class="portfolio__img-wrapper">
+                    <img src="/Beats/img/team__section/2.jpeg" alt="Мужчина в голубой рубашке" class="portfolio__img">
+                  </div>
+                  <h5 class="h5 portfolio__career">Специалист по упаковке</h5>
+                  <p class="portfolio__info">Автор запоминающегося стиля
+                    наших батончиков.
+                  </p>
+                </div>
+              </div>
+            </li>
+            <li class="team__item portfolio">
+
+              <div class="portfolio__name-wrapper">
+                <h4 class="h4 portfolio__name">Кирилл Матросов</h4>
+                <img src="./img/team__section/triangle.png" alt="" class="portfolio__name-triangle">
+              </div>
+
+              <div class="portfolio__description">
+                <div class="portfolio__description-block">
+                  <div class="portfolio__img-wrapper">
+                    <img src="/Beats/img/team__section/3.jpeg" alt="Мужчина в голубой рубашке" class="portfolio__img">
+                  </div>
+                  <h5 class="h5 portfolio__career">Оператор</h5>
+                  <p class="portfolio__info">Разработал дизан
+                    наушников beats solo 3.
+                  </p>
+                </div>
+              </div>
+            </li>
+            <li class="team__item portfolio">
+
+              <div class="portfolio__name-wrapper">
+                <h4 class="h4 portfolio__name">Мила Рыжкова</h4>
+                <img src="./img/team__section/triangle.png" alt="" class="portfolio__name-triangle">
+              </div>
+
+              <div class="portfolio__description">
+                <div class="portfolio__description-block">
+                  <div class="portfolio__img-wrapper">
+                    <img src="/Beats/img/team__section/4.jpeg" alt="Мужчина в голубой рубашке" class="portfolio__img">
+                  </div>
+                  <h5 class="h5 portfolio__career">PR, маркетинг</h5>
+                  <p class="portfolio__info">По всем вопросам сотрудничества
+                    и рекламы писать только Миле.
+                  </p>
+                </div>
               </div>
             </li>
           </ul>
@@ -384,8 +519,8 @@
         <div class="container reviews__container">
           <h2 class="h2 section__title">отзывы</h2>
           <div class="reviews">
-            <div class="reviews__display">
-              <div class="reviews__display-inner reviews__display-inner--active">
+            <ul class="reviews__display">
+              <li class="reviews__display-inner reviews__display-inner--active" data-linked-with="one">
                 <div class="reviews__avatar">
                   <img src="/Beats/img/section__reviews/photo1.png" alt="" class="reviews__avatar-img">
                 </div>
@@ -402,8 +537,8 @@
                     Билли Айлиш
                   </div>
                 </article>
-              </div>
-              <div class="reviews__display-inner">
+              </li>
+              <li class="reviews__display-inner" data-linked-with="two">
                 <div class="reviews__avatar">
                   <img src="/Beats/img/section__reviews/photo2.png" alt="" class="reviews__avatar-img">
                 </div>
@@ -420,8 +555,8 @@
                     Вадим Грачев
                   </div>
                 </article>
-              </div>
-              <div class="reviews__display-inner">
+              </li>
+              <li class="reviews__display-inner" data-linked-with="three">
                 <div class="reviews__avatar">
                   <img src="/Beats/img/section__reviews/photo3.png" alt="" class="reviews__avatar-img">
                 </div>
@@ -439,23 +574,23 @@
                     Мария Орлова
                   </div>
                 </article>
-              </div>
-            </div>
+              </li>
+            </ul>
             <ul class="reviews__switcher">
               <li class="reviews__switcher-item interactive-avatar interactive-avatar--active">
-                <a href="#" class="interactive-avatar__link">
+                <a href="#" class="interactive-avatar__link" data-open="one">
                   <img src="/Beats/img/section__reviews/photo1.png" alt="Billie Eilish avatar"
                     class="interactive-avatar__img">
                 </a>
               </li>
               <li class="reviews__switcher-item interactive-avatar">
-                <a href="#" class="interactive-avatar__link">
+                <a href="#" class="interactive-avatar__link" data-open="two">
                   <img src="/Beats/img/section__reviews/photo2.png" alt="man in cap avatar"
                     class="interactive-avatar__img">
                 </a>
               </li>
               <li class="reviews__switcher-item interactive-avatar">
-                <a href="#" class="interactive-avatar__link">
+                <a href="#" class="interactive-avatar__link" data-open="three">
                   <img src="/Beats/img/section__reviews/photo3.png" alt="Woman avatar" class="interactive-avatar__img">
                 </a>
               </li>
@@ -622,7 +757,7 @@
     </div>
   </div>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
-  <script src="./js/hamburger__menu.js"></script>
+  <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
   <script src="./js/main.js"></script>
 </body>
 
