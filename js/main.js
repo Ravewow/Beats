@@ -54,7 +54,9 @@ $(".portfolio__name").click((e) => {
   const $this = $(e.currentTarget);
   const container = $this.closest(".team__list");
   const elemContainer = $this.closest(".team__item");
+  const triangle = $this.next(".portfolio__name-triangle");
 
+  triangle.toggleClass("portfolio__name-triangle--rotate");
   if (elemContainer.hasClass("active")) {
     closeEveryItem(container);
   } else {
@@ -62,6 +64,7 @@ $(".portfolio__name").click((e) => {
     openItem($this);
   }
 });
+
 
 // review Animation
 
