@@ -666,7 +666,7 @@
                 </label>
               </div>
               <div class="form__buttons">
-                <button type="submit" value="Заказать" class="button">Заказать</button>
+                <button type="submit" value="Заказать" class="button" id="openOverlay">Заказать</button>
                 <button type="reset" value="Очистить" class="button button--transparent">Очистить</button>
               </div>
             </div>
@@ -757,6 +757,12 @@
       </ul>
     </div>
   </div>
+  <script type="html/template" id="overlayTemplate">
+    <div class="modal-container">
+      <div class="content">
+      </div>
+    </div>
+  </script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
   <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
   <script src="./js/main.js"></script>
