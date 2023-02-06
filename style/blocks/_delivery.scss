@@ -142,6 +142,10 @@
   font-weight: 400;
   font-size: 18px;
   color: #000000;
+
+  &:not(:last-child) {
+    margin-bottom: 0;
+  }
 }
 
 .swal-footer {
@@ -176,7 +180,7 @@
 }
 
 .swal-button-container {
-  margin: rem(15px);
+  margin: rem(15px) rem(20px);
 
   @include phones {
     margin-bottom: rem(37px);

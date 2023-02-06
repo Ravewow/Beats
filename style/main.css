@@ -943,6 +943,9 @@ header {
   font-size: 18px;
   color: #000000;
 }
+.swal-title:not(:last-child) {
+  margin-bottom: 0;
+}
 
 .swal-footer {
   text-align: center;
@@ -980,7 +983,7 @@ header {
 }
 
 .swal-button-container {
-  margin: 0.9375rem;
+  margin: 0.9375rem 1.25rem;
 }
 @media screen and (max-width: 480px) {
   .swal-button-container {
