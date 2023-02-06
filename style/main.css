@@ -912,60 +912,69 @@ header {
   margin-bottom: 1.25rem;
 }
 
-.overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
+.input-error {
+  border-color: #e01f3d;
+  outline: none;
+}
+
+.swal-overlay--show-modal {
   background: #313131;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  z-index: 10000;
 }
 
-.modal-container {
-  position: relative;
-}
-
-.content {
+.swal-overlay--show-modal .swal-modal {
   width: 19.3125rem;
   height: 11rem;
-  background: rgb(255, 255, 255);
-  border-radius: 5px;
-  padding: 10px;
-  color: #000;
-  margin: 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+}
+
+.swal-title {
   font-family: "Play";
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
+  color: #000000;
 }
 
-.modal--button {
-  margin-top: 1.125rem;
-  max-width: 9.8125rem;
-  max-height: 3.75rem;
+.swal-footer {
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+.swal-button {
+  padding: 1.125rem 2.56rem;
+  background: #e01f3d;
+  border-radius: 6.25rem;
+  color: #fff;
+  font-family: "Play";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  border: none !important;
+  -webkit-box-shadow: none !important;
+          box-shadow: none !important;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+@media screen and (max-width: 480px) {
+  .swal-button {
+    text-align: center;
+    max-width: 12rem;
+    max-height: 4.0625rem;
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+  }
+}
+.swal-button:hover {
+  background: #CA1B36 !important;
+}
+
+.swal-button-container {
+  margin: 0;
+}
+
+.red {
+  color: red;
 }
 
 .radio {

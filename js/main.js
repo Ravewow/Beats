@@ -90,44 +90,52 @@ $(".interactive-avatar__link").click((e) => {
 });
 
 // form section
-// --modal
+// --form
 
-const openButton = document.querySelector("#openOverlay");
-const successModal = createModal("Cообщение отправлено");
-const body = document.body;
-
-openButton.addEventListener("click", (e) => {
-  e.preventDefault();
-  body.appendChild(successModal);
-});
-
-function createModal(content) {
-  const overlayElement = document.createElement("div");
-  overlayElement.classList.add("overlay");
-
-  const template = document.querySelector("#overlayTemplate");
-
-  overlayElement.innerHTML = template.innerHTML;
-  overlayElement.addEventListener("click", (e) => {
-    if (e.target === overlayElement) {
-      closeElement.click();
+const validateFields = (form, fieldArray) => {
+  fieldArray.forEach((field) => {
+    field.removeClass("input-error");
+    if (field.val().trim() === "") {
+      field.addClass("input-error");
     }
   });
 
-  const contentElement = overlayElement.querySelector(".content");
-  contentElement.innerHTML = content;
+  const errorFields = form.find(".input-error");
+  return errorFields.length === 0;
+};
 
-  const closeElement = document.createElement("button");
-  closeElement.classList.add("button", "modal--button");
-  closeElement.textContent = "Закрыть";
+$(".form").submit((e) => {
+  e.preventDefault();
+  const form = $(e.currentTarget);
+  const name = form.find("[name='name']");
+  const phone = form.find("[name='phone']");
+  const comment = form.find("[name='comment']");
+  const to = form.find("[name='to']");
 
-  contentElement.appendChild(closeElement);
+  const isValid = validateFields(form, [name, phone, comment, to]);
 
-  closeElement.addEventListener("click", (e) => {
-    e.preventDefault();
-    body.removeChild(overlayElement);
-  });
-
-
-  return overlayElement;
-}
+  if (isValid) {
+    $.ajax({
+      url: "https://webdev-api.loftschool.com/sendmail",
+      method: "post",
+      data: {
+        name: name.val(),
+        phone: phone.val(),
+        comment: comment.val(),
+        to: to.val(),
+      },
+      success: (data) => {
+        swal({
+          title: data.message,
+          button: "Закрыть",
+        });
+      },
+      error: (data) => {
+        swal({
+          title: "Отправить письмо не удалось, повторите запрос позже",
+          button: "Закрыть",
+        });
+      },
+    });
+  }
+});

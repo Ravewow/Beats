@@ -112,43 +112,64 @@
   margin-bottom: 1.25rem;
 }
 
-.overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
+.input-error {
+  border-color: #e01f3d;
+  outline: none;
+
+}
+
+.swal-overlay--show-modal {
   background: #313131;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 10000;
 }
 
-.modal-container {
-  position: relative;
-}
-
-.content {
+.swal-overlay--show-modal .swal-modal {
   width: rem(309px);
   height: rem(176px);
-  background: rgba(255, 255, 255, 1);
-  border-radius: 5px;
-  padding: 10px;
-  color: #000;
-  margin: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+}
+
+.swal-title {
   font-family: "Play";
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
+  color: #000000;
 }
 
-.modal--button {
-  margin-top: rem(18px);
-  max-width: rem(157px);
-  max-height: rem(60px);
+.swal-footer {
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+.swal-button {
+  padding: 1.125rem 2.56rem;
+  background: #e01f3d;
+  border-radius: 6.25rem;
+  color: #fff;
+  font-family: "Play";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  border: none !important;
+  box-shadow: none !important;
+  transition: 0.5s;
+
+  @include phones {
+    text-align: center;
+    max-width: 12rem;
+    max-height: rem(65px);
+    flex: 1;
+  }
+
+  &:hover {
+    background: #CA1B36 !important;
+  }
+}
+
+.swal-button-container {
+  margin: 0;
+}
+
+.red {
+  color: red;
 }
