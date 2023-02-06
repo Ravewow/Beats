@@ -112,10 +112,12 @@ $(".form").submit((e) => {
   const comment = form.find("[name='comment']");
   const to = form.find("[name='to']");
 
+  $(".swal-title").removeClass("error-modal");
+
   const isValid = validateFields(form, [name, phone, comment, to]);
 
   if (isValid) {
-    $.ajax({
+    const requestDelivery = $.ajax({
       url: "https://webdev-api.loftschool.com/sendmail",
       method: "post",
       data: {
@@ -124,18 +126,27 @@ $(".form").submit((e) => {
         comment: comment.val(),
         to: to.val(),
       },
-      success: (data) => {
-        swal({
-          title: data.message,
-          button: "Закрыть",
-        });
-      },
-      error: (data) => {
-        swal({
-          title: "Отправить письмо не удалось, повторите запрос позже",
-          button: "Закрыть",
-        });
-      },
+    });
+
+    requestDelivery.done((data) => {
+      swal({
+        title: data.message,
+        button: "Закрыть",
+      });
+      $(".swal-button").click((e) => {
+        $("#form").trigger("reset");
+      });
+    });
+
+    requestDelivery.fail((data) => {
+      swal({
+        title: "Отправить письмо не удалось, повторите запрос позже",
+        button: "Закрыть",
+      });
+      $(".swal-title").addClass("error-modal");
+      $(".swal-button").click((e) => {
+        $("#form").trigger("reset");
+      });
     });
   }
 });
