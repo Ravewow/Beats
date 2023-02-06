@@ -100,12 +100,17 @@
   }
 }
 
+
 .radio__title {
   font-family: "Play";
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
   line-height: 19px;
+
+  @include tablets {
+    margin-bottom: 10px;
+  }
 }
 
 .form__controls--payment {
@@ -124,7 +129,11 @@
 
 .swal-overlay--show-modal .swal-modal {
   width: rem(309px);
-  height: rem(176px);
+  min-height: rem(176px);
+
+  @include phones {
+    width: 80%;
+  }
 }
 
 .swal-title {
@@ -167,7 +176,11 @@
 }
 
 .swal-button-container {
-  margin: 0;
+  margin: rem(10px);
+
+  @include phones {
+    margin-bottom: rem(37px);
+  }
 }
 
 .error-modal {

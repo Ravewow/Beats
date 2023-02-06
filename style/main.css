@@ -907,6 +907,11 @@ header {
   font-size: 16px;
   line-height: 19px;
 }
+@media screen and (max-width: 768px) {
+  .radio__title {
+    margin-bottom: 10px;
+  }
+}
 
 .form__controls--payment {
   margin-bottom: 1.25rem;
@@ -923,7 +928,12 @@ header {
 
 .swal-overlay--show-modal .swal-modal {
   width: 19.3125rem;
-  height: 11rem;
+  min-height: 11rem;
+}
+@media screen and (max-width: 480px) {
+  .swal-overlay--show-modal .swal-modal {
+    width: 80%;
+  }
 }
 
 .swal-title {
@@ -970,7 +980,12 @@ header {
 }
 
 .swal-button-container {
-  margin: 0;
+  margin: 0.625rem;
+}
+@media screen and (max-width: 480px) {
+  .swal-button-container {
+    margin-bottom: 2.3125rem;
+  }
 }
 
 .error-modal {
