@@ -133,18 +133,22 @@ $(".form").submit((e) => {
         title: data.message,
         button: "Закрыть",
       });
-      $(".swal-button").click((e) => {
+      $("body").addClass("body__frozen");
+      $(".swal-button").click(() => {
+        $(".body").removeClass("body__frozen");
         $("#form").trigger("reset");
       });
     });
 
-    requestDelivery.fail((data) => {
+    requestDelivery.fail(() => {
       swal({
         title: "Отправить письмо не удалось, повторите запрос позже",
         button: "Закрыть",
       });
+      $("body").addClass("body__frozen");
       $(".swal-title").addClass("error-modal");
-      $(".swal-button").click((e) => {
+      $(".swal-button").click(() => {
+        $(".body").removeClass("body__frozen");
         $("#form").trigger("reset");
       });
     });

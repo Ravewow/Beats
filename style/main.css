@@ -94,6 +94,11 @@ footer {
   width: 100%;
 }
 
+.body__frozen {
+  height: 100%;
+  overflow: hidden;
+}
+
 header {
   display: -webkit-box;
   display: -ms-flexbox;
