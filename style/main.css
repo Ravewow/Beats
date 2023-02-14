@@ -1161,8 +1161,13 @@ header {
 }
 
 .map__section {
-  background: url("/Beats/img/section__contacts/map.jpg") top center/cover no-repeat;
-  position: relative;
+  height: 100vh;
+  min-height: 40.625rem;
+}
+
+.map {
+  width: 500px;
+  height: 500px;
 }
 
 .footer__container {
@@ -1728,4 +1733,114 @@ header {
 
 .team--version--desktop .portfolio__description {
   position: absolute;
+}
+
+.products {
+  background: url("/Beats/img/section__products/bg__img.png") left 60% center/cover no-repeat;
+  height: 100vh;
+  min-height: 40.625rem;
+}
+
+.products-menu__section {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.products__container {
+  min-width: 90%;
+}
+
+.products__title {
+  position: absolute;
+  top: 7.1875rem;
+  left: 5.25rem;
+  font-family: "Play";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 52px;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+@media screen and (max-width: 480px) {
+  .products__title {
+    font-size: 32px;
+  }
+}
+
+.products-menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.products-menu__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  cursor: pointer;
+  height: 100%;
+}
+
+.products-menu__title {
+  background: #999999;
+  position: relative;
+  width: 6.375rem;
+}
+
+.color--black {
+  background: #151515;
+}
+
+.color--red {
+  background: #e01f3c;
+}
+
+.products-menu__text {
+  position: absolute;
+  left: 50%;
+  bottom: 15%;
+  -webkit-transform: rotate(-90deg) translate(-50%, -50%);
+          transform: rotate(-90deg) translate(-50%, -50%);
+  -webkit-transform-origin: 0 0;
+          transform-origin: 0 0;
+  white-space: nowrap;
+  font-family: "Alegreya Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 43px;
+  color: #ffffff;
+}
+
+.products-menu__content {
+  width: 0;
+  padding: 0px;
+  opacity: 1;
+  overflow: hidden;
+  background: rgba(51, 53, 55, 0.9);
+}
+
+.products-menu__item--active > .products-menu__content {
+  width: 100%;
+  padding: 2.375rem 2.375rem 0 2.375rem;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  opacity: 1;
+  z-index: 10;
+  font-family: "Alegreya Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16.0138px;
+  line-height: 24px;
+  color: #ffffff;
 }

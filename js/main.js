@@ -154,3 +154,41 @@ $(".form").submit((e) => {
     });
   }
 });
+
+// product section
+
+const lines = document.querySelectorAll(".products-menu__item");
+
+for (let index = 0; index < lines.length; index++) {
+  const element = lines[index];
+  element.addEventListener("click", (e) => {
+    e.preventDefault();
+    if (e.target.classList.contains("products-menu__content")) return;
+
+    const currentLine = e.target.closest(".products-menu__item");
+
+    for (let i = 0; i < lines.length; i++) {
+      if (lines[i] !== currentLine)
+        lines[i].classList.remove("products-menu__item--active");
+    }
+
+    if (currentLine.classList.contains("products-menu__item--active")) {
+      currentLine.classList.remove("products-menu__item--active");
+    } else {
+      currentLine.classList.add("products-menu__item--active");
+    }
+  });
+}
+
+// Map
+
+let myMap;
+
+const init = () => {
+  myMap = new ymaps.Map("map",     {
+    center: [55.76, 37.64],
+    zoom: 7,
+  });
+};
+
+ymap.ready(init)
