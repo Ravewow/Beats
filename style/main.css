@@ -1751,7 +1751,7 @@ header {
 
 .products {
   background: url("/Beats/img/section__products/bg__img.png") left 60% center/cover no-repeat;
-  height: 100vh;
+  height: 100%;
   min-height: 40.625rem;
 }
 @media screen and (max-width: 768px) {
