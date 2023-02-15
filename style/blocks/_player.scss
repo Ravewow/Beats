@@ -1,0 +1,189 @@
+
+.player-section{
+  background: #F8FAF9;
+
+}
+
+.player-section__container{
+  margin-top: rem(44px);
+  display: flex;
+  justify-content: center;
+
+  @include tablets {
+  }
+
+  @include phones{
+    width: rem(550px);
+    height: rem(372px);
+    position: relative;
+    left: rem(-11px);
+  }
+}
+
+.player{
+  position: relative;
+  width: rem(662px);
+  height: rem(367px);
+
+  &.active .player__splash{
+    display: none;
+  }
+
+  &.paused{
+    .player__start {
+      width: rem(14px);
+      height: rem(22px);
+      border: none;
+
+      &:after,
+      &:before{
+        content: "";
+        display: block;
+        position: absolute;
+        width: rem(5px);
+        top: 0;
+        bottom: 0;
+        background: #333333;
+      }
+
+      &:after {
+        right: rem(623px);
+        background: white;
+        margin-top: 7px;
+        margin-bottom: 7px;
+
+        @include phones{
+          right: rem(510px);
+        }
+      }
+
+      &:before{
+        left: rem(23px);
+        background: white;
+        margin-top: 7px;
+        margin-bottom: 7px;
+      }
+    }
+  }
+}
+
+.player.active.paused .player__icon{
+    display: none;
+  
+}
+
+.player__splash{
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url("/Beats/img/section__player/splashscreen.png") center center/cover no-repeat;
+  cursor: pointer;
+}
+
+.player__controls{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: rem(35px);
+  background: #151515;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 rem(25px);
+
+}
+
+.player__icon{
+  width: rem(11px);
+  height: rem(16px);
+  margin-top: rem(3px);
+}
+
+.player__playback{
+  height: rem(16px);
+  width: rem(442px);
+  position: relative;
+
+  &:before{
+    content: "";
+    height: rem(4px);
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    background: #333333;
+    display: block;
+    transform: translateY(-50%);
+  }
+
+  @include phones {
+    width: rem(350px);
+  }
+}
+
+.player__playback-button{
+  background: #E01F3D;
+  border-radius: rem(50px);
+  border: none;
+  width: rem(14px);
+  height: rem(14px);
+  padding: 0;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  left: 0;
+}
+
+.player__elem{
+  width: rem(662px);
+  height: rem(367px);
+}
+
+.player__duration{
+  display: none;
+}
+
+.player__volume-icon{
+  width: rem(11px);
+  height: rem(15px);
+  margin-top: rem(4px);
+
+}
+
+.player__playback-volume{
+  height: rem(16px);
+  width: rem(55px);
+  position: relative;
+  &:before{
+    content: "";
+    height: rem(4px);
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    background: #333333;
+    display: block;
+    transform: translateY(-50%);
+  }
+}
+
+.player__volume-button{
+  background: #E01F3D;
+  border-radius: rem(50px);
+  border: none;
+  width: rem(14px);
+  height: rem(14px);
+  padding: 0;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  left: 100%;
+}
+
+.player__start, .player__volume {
+  background: transparent;
+}
+
