@@ -3,6 +3,16 @@
     cover no-repeat;
   height: 100vh;
   min-height: 40.625rem;
+
+  @include tablets {
+    background: url("/Beats/img/section__products/bg__img.png") left 90% center /
+    cover no-repeat;
+  }
+
+  @include phones {
+    background: url("/Beats/img/section__products/bg__img.png") left 73% center /
+    cover no-repeat;
+  }
 }
 
 .products-menu__section {
@@ -29,6 +39,8 @@
 
   @include phones {
     font-size: 32px;
+    top: rem(76px);
+    left: rem(10px);
   }
 }
 
@@ -48,6 +60,10 @@
   background: #999999;
   position: relative;
   width: rem(102px);
+
+  @include phones {
+    width: rem(90px );
+  }
 }
 
 .color--black {
@@ -61,7 +77,7 @@
 .products-menu__text {
   position: absolute;
   left: 50%;
-  bottom: 15%;
+  bottom: 20%;
   transform: rotate(-90deg) translate(-50%, -50%);
   transform-origin: 0 0;
   white-space: nowrap;
@@ -75,19 +91,32 @@
 
 .products-menu__content {
   width: 0;
-  padding: 0px;
+  padding: 0;
   opacity: 1;
   overflow: hidden;
   background: rgba(51, 53, 55, 0.9);
+  transition: 0.4s;
+  position: relative;
+
 }
 
-.products-menu__item--active > .products-menu__content {
-  // width: rem(524px);
-  width: 100%;
-  padding: rem(38px) rem(38px) 0 rem(38px);
+.products-menu__item--active .products-menu__content {
   box-sizing: border-box;
   opacity: 1;
   z-index: 10;
+
+}
+
+.product-menu__close {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: 3%;
+  right: 5%;
+}
+
+.products__menu-textcontent {
+  padding: 31px 40px 0 38px;
   font-family: "Alegreya Sans";
   font-style: normal;
   font-weight: 400;

@@ -156,29 +156,64 @@ $(".form").submit((e) => {
 });
 
 // product section
+const mesureWidth = (item) => {
+  let reqItemWith = 0;
+  const screenWidth = $(window).width();
+  const container = item.closest(".products-menu");
+  const titlesBlock = container.find(".products-menu__title");
+  const titlesWidth = titlesBlock.width() * titlesBlock.length;
+  const textContainer = item.find(".products__menu-textcontent");
+  const paddingLeft = parseInt(textContainer.css("padding-left"));
+  const paddingRight = parseInt(textContainer.css("padding-right"));
+  const isMobile = window.matchMedia("(max-width: 768px)").matches;
 
-const lines = document.querySelectorAll(".products-menu__item");
+  if (isMobile) {
+    reqItemWith = screenWidth - titlesWidth;
+  } else {
+    reqItemWith = 500;
+  }
 
-for (let index = 0; index < lines.length; index++) {
-  const element = lines[index];
-  element.addEventListener("click", (e) => {
-    e.preventDefault();
-    if (e.target.classList.contains("products-menu__content")) return;
+  return {
+    container: reqItemWith,
+    textContainer: reqItemWith - paddingLeft - paddingRight,
+  };
+};
+const closeEveryItemInContainer = (container) => {
+  const items = container.find(".products-menu__item");
+  const content = container.find(".products-menu__content");
+  items.removeClass("products-menu__item--active");
+  content.width(0);
+};
+const openItemAcco = (item) => {
+  const hiddenContent = item.find(".products-menu__content");
+  const reqWidth = mesureWidth(item);
+  const textBlock = item.find(".products__menu-textcontent");
 
-    const currentLine = e.target.closest(".products-menu__item");
+  item.addClass("products-menu__item--active");
+  hiddenContent.width(reqWidth.container);
+  textBlock.width(reqWidth.textContainer);
+};
+$(".products-menu__title").on("click", (e) => {
+  e.preventDefault();
 
-    for (let i = 0; i < lines.length; i++) {
-      if (lines[i] !== currentLine)
-        lines[i].classList.remove("products-menu__item--active");
-    }
+  const $this = $(e.currentTarget);
+  const item = $this.closest(".products-menu__item");
+  const itemOpened = item.hasClass("products-menu__item--active");
+  const container = $this.closest(".products-menu");
 
-    if (currentLine.classList.contains("products-menu__item--active")) {
-      currentLine.classList.remove("products-menu__item--active");
-    } else {
-      currentLine.classList.add("products-menu__item--active");
-    }
-  });
-}
+  if (itemOpened) {
+    closeEveryItemInContainer(container);
+  } else {
+    closeEveryItemInContainer(container);
+    openItemAcco(item);
+  }
+});
+
+$(".product-menu__close").on("click", (e) => {
+  e.preventDefault();
+
+  closeEveryItemInContainer($(".products-menu"));
+});
 
 // player
 
@@ -330,5 +365,143 @@ function onYouTubeIframeAPIReady() {
 
 eventsInit();
 
+// fixed menu
 
-/////////
+const sections = $("section");
+const display = $(".maincontent");
+const sideMenu = $(".fixed-menu");
+const menuItems = sideMenu.find(".fixed-menu__item");
+
+const mobileDetect = new MobileDetect(window.navigator.userAgent);
+const isMobile = mobileDetect.mobile();
+
+let inScroll = false;
+
+sections.first().addClass("active");
+
+const countSectionPosition = (sectionEq) => {
+  const position = sectionEq * -100;
+
+  if (isNaN(position)) {
+    console.error("Передано не верное значение в countSectionPosition");
+    return 0;
+  }
+  return position;
+};
+
+const changeMenuThemeForSection = (sectionEq) => {
+  const currentSection = sections.eq(sectionEq);
+  const menuTheme = currentSection.attr("data-sidemenu-theme");
+  const activeClass = "fixed-menu--white";
+
+  if (menuTheme === "dark--white") {
+    sideMenu.addClass(activeClass);
+  } else {
+    sideMenu.removeClass(activeClass);
+  }
+};
+
+const resetActiveClassForItem = (items, itemEq, activeClass) => {
+  items.eq(itemEq).addClass(activeClass).siblings().removeClass(activeClass);
+};
+
+const performTransition = (sectionEq) => {
+  if (inScroll) return;
+
+  const transitionOver = 1000;
+  const mouseInertiaOver = 300;
+
+  inScroll = true;
+  const position = countSectionPosition(sectionEq);
+
+  changeMenuThemeForSection(sectionEq);
+
+  display.css({
+    transform: `translateY(${position}%)`,
+  });
+  resetActiveClassForItem(sections, sectionEq, "active");
+  sections.eq(sectionEq).addClass("active").siblings().removeClass("active");
+
+  setTimeout(() => {
+    inScroll = false;
+    resetActiveClassForItem(menuItems, sectionEq, "fixed-menu__item--active");
+  }, transitionOver + mouseInertiaOver);
+};
+
+const viewporScroller = () => {
+  const activeSection = sections.filter(".active");
+  const nextSection = activeSection.next();
+  const prevSection = activeSection.prev();
+
+  return {
+    next() {
+      if (nextSection.length) {
+        performTransition(nextSection.index());
+      }
+    },
+    prev() {
+      if (prevSection.length) {
+        performTransition(prevSection.index());
+      }
+    },
+  };
+};
+
+$(window).on("wheel", (e) => {
+  const deltaY = e.originalEvent.deltaY;
+  const scroller = viewporScroller();
+  if (deltaY > 0) {
+    scroller.next();
+  }
+
+  if (deltaY < 0) {
+    scroller.prev();
+  }
+});
+
+$(window).on("keydown", (e) => {
+  const tagName = e.target.tagName.toLowerCase();
+  const userTypingInInputs = tagName === "input" || tagName === "textarea";
+  const scroller = viewporScroller();
+  if (userTypingInInputs) return;
+
+  switch (e.keyCode) {
+    case 38:
+      scroller("prev");
+      break;
+
+    case 40:
+      scroller("next");
+      break;
+  }
+});
+
+$(".wrapper").on("touchemove", (e) => e.preventDefault());
+
+$("[data-scroll-to]").click((e) => {
+  e.preventDefault();
+
+  const $this = $(e.currentTarget);
+  const target = $this.attr("data-scroll-to");
+  const reqSection = $(`[data-section-id=${target}]`);
+
+  performTransition(reqSection.index());
+});
+
+// touch swipe
+
+if (isMobile) {
+  // https://github.com/mattbryson/TouchSwipe-Jquery-Plugin
+
+  $("body").swipe({
+    swipe: function (event, direction) {
+      const scroller = viewporScroller();
+      let scrollDirection = "";
+
+      if (direction === "up") scrollDirection = "next";
+      if (direction === "down") scrollDirection = "prev";
+
+      scroller[scrollDirection]();
+    },
+  });
+}

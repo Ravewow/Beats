@@ -12,14 +12,13 @@
 
   &--active {
     .fixed-menu__link {
-      border-color: #E01F3D;
-      
+      border-color: #e01f3d;
     }
   }
 
   &--active {
     .fixed-menu__link::before {
-      background: #E01F3D;
+      background: #e01f3d;
     }
   }
 }
@@ -43,5 +42,23 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+  }
+}
+
+.fixed-menu--white .fixed-menu__item {
+  .fixed-menu__link {
+    &:before {
+      background: white;
+    }
+  }
+
+  &--active {
+    .fixed-menu__link {
+      border-color: white;
+      &:before {
+        background: white;
+        
+      }
+    }
   }
 }

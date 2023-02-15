@@ -23,7 +23,7 @@
 <body class="body">
   <div class="wrapper">
     <main class="maincontent">
-      <section class="hello hello__section">
+      <section data-section-id="hello" class="hello hello__section">
         <div class="container hello__container">
           <header class="header">
             <a href="/" class="logo">
@@ -33,13 +33,13 @@
             </a>
             <nav class="menu">
               <ul class="menu__list">
-                <li class="menu__item"><a href="#" class="menu__link">О нас</a></li>
-                <li class="menu__item"><a href="#" class="menu__link">Наушники</a></li>
-                <li class="menu__item"><a href="#" class="menu__link">Команда</a></li>
-                <li class="menu__item"><a href="#" class="menu__link">Цвета</a></li>
-                <li class="menu__item"><a href="#" class="menu__link">Отзывы</a></li>
-                <li class="menu__item"><a href="#" class="menu__link">Как мы работаем</a></li>
-                <li class="menu__item"><a href="#" class="menu__link">Контакты </a></li>
+                <li class="menu__item"><a href="" data-scroll-to="benefits" class="menu__link">О нас</a></li>
+                <li class="menu__item"><a href="#" data-scroll-to="slider" class="menu__link">Наушники</a></li>
+                <li class="menu__item"><a href="#" data-scroll-to="team" class="menu__link">Команда</a></li>
+                <li class="menu__item"><a href="#" data-scroll-to="products" class="menu__link">Цвета</a></li>
+                <li class="menu__item"><a href="#" data-scroll-to="reviews" class="menu__link">Отзывы</a></li>
+                <li class="menu__item"><a href="#" data-scroll-to="player" class="menu__link">Как мы работаем</a></li>
+                <li class="menu__item"><a href="#" data-scroll-to="map" class="menu__link">Контакты </a></li>
               </ul>
             </nav>
             <a href="tel:+78009039090" class="contacts__phone contacts__phone--header">
@@ -63,7 +63,7 @@
               <h1 class="h1 hello__title">Беспроводные наушники Beats Solo 3</h1>
               <p class="hello__text">Встречайте новую версию наушников
                 из линейки Powerbeats.</p>
-              <a href="#" class="button hello--button">ЗАКАЗАТЬ</a>
+              <a href="#" data-scroll-to="delivery" class="button hello--button">ЗАКАЗАТЬ</a>
             </div>
             <div class="hello__content-img">
               <img src="/Beats/img/hello/headphones.png" alt="" class="hello__content-img-item">
@@ -99,7 +99,8 @@
           </div>
         </div>
       </section>
-      <section class="section benefits__section section__decor--triangle">
+      <section data-sidemenu-theme="dark--red" data-section-id="benefits"
+        class="section benefits__section section__decor--triangle">
         <div class="container">
           <div class="headline">
             <h2 class="h2 section__title headline__title">почему beats solo 3?</h2>
@@ -169,7 +170,7 @@
           </ul>
         </div>
       </section>
-      <section class="section slider__section">
+      <section data-sidemenu-theme="dark--red" data-section-id="slider" class="section slider__section">
         <div class="container slider__container">
 
           <div class="slider__list-wrapper">
@@ -256,7 +257,7 @@
                     </ul>
                     <div class="slide__bottom">
                       <div class="slide__price">14 990 ₽</div>
-                      <a href="#" class="button slide__button">Заказать</a>
+                      <a href="#" data-scroll-to="delivery" class="button slide__button">Заказать</a>
                     </div>
                   </div>
                 </div>
@@ -342,7 +343,7 @@
                     </ul>
                     <div class="slide__bottom">
                       <div class="slide__price">14 990 ₽</div>
-                      <a href="#" class="button slide__button">Заказать</a>
+                      <a href="#" data-scroll-to="delivery" class="button slide__button">Заказать</a>
                     </div>
                   </div>
                 </div>
@@ -361,7 +362,7 @@
           </div>
         </div>
       </section>
-      <section class="section team__section">
+      <section data-sidemenu-theme="dark--red" data-section-id="team" class="section team__section">
         <div class="container">
           <div class="team__title">
             <h2 class="h2 team__title-item section__title">команда</h2>
@@ -520,46 +521,60 @@
           </ul>
         </div>
       </section>
-      <section class="products products-menu__section">
+      <section data-sidemenu-theme="dark--white" data-section-id="products" class="products products-menu__section">
         <div class="products__container">
           <h2 class="h2 products__title">Меню</h2>
           <ul class="products-menu">
             <li class="products-menu__item">
               <a href="#" class="products-menu__title"><span class="products-menu__text">«Атласное серебро»</span></a>
               <div class="products-menu__content">
-                <p>Наушники Beats Solo3 могут работать до 40 часов без подзарядки, чтобы вы могли пользоваться ими
+                <div class="products__menu-textcontent"> Наушники Beats Solo3 могут работать до 40 часов без подзарядки,
+                  чтобы
+                  вы могли пользоваться ими
                   каждый
                   день. 5-минутной зарядки Fast Fuel хватит ещё на 3 часа воспроизведения. Фирменное звучание Beats в
                   наушниках с технологией Bluetooth класса 1 будет сопровождать вас повсюду — куда бы вы ни отправились.
-                  Расположение чашек с мягкими амбушюрами можно регулировать — вы сможете носить их целый день.</p>
+                  Расположение чашек с мягкими амбушюрами можно регулировать — вы сможете носить их целый день.</div>
+
+                <svg class="product-menu__close">
+                  <use class="icon" xlink:href="./img/sprite.svg#close"></use>
+                </svg>
               </div>
             </li>
             <li class="products-menu__item">
               <a href="#" class="products-menu__title color--black"><span class="products-menu__text">«Чёрный
                   матовый»</span></a>
               <div class="products-menu__content">
-                <p>Наушники Beats Solo3 могут работать до 40 часов без подзарядки, чтобы вы могли пользоваться ими
+                <div class="products__menu-textcontent"> Наушники Beats Solo3 могут работать до 40 часов без подзарядки,
+                  чтобы вы могли пользоваться ими
                   каждый
                   день. 5-минутной зарядки Fast Fuel хватит ещё на 3 часа воспроизведения. Фирменное звучание Beats в
                   наушниках с технологией Bluetooth класса 1 будет сопровождать вас повсюду — куда бы вы ни отправились.
-                  Расположение чашек с мягкими амбушюрами можно регулировать — вы сможете носить их целый день.</p>
+                  Расположение чашек с мягкими амбушюрами можно регулировать — вы сможете носить их целый день.</div>
+                <svg class="product-menu__close">
+                  <use class="icon" xlink:href="./img/sprite.svg#close"></use>
+                </svg>
               </div>
             </li>
             <li class="products-menu__item">
               <a href="#" class="products-menu__title color--red"><span class="products-menu__text">«Красный
                   цитрус»</span></a>
               <div class="products-menu__content">
-                <p>Наушники Beats Solo3 могут работать до 40 часов без подзарядки, чтобы вы могли пользоваться ими
+                <div class="products__menu-textcontent"> Наушники Beats Solo3 могут работать до 40 часов без подзарядки,
+                  чтобы вы могли пользоваться ими
                   каждый
                   день. 5-минутной зарядки Fast Fuel хватит ещё на 3 часа воспроизведения. Фирменное звучание Beats в
                   наушниках с технологией Bluetooth класса 1 будет сопровождать вас повсюду — куда бы вы ни отправились.
-                  Расположение чашек с мягкими амбушюрами можно регулировать — вы сможете носить их целый день.</p>
+                  Расположение чашек с мягкими амбушюрами можно регулировать — вы сможете носить их целый день.</div>
+                <svg class="product-menu__close">
+                  <use xlink:href="./img/sprite.svg#close"></use>
+                </svg>
               </div>
             </li>
           </ul>
         </div>
       </section>
-      <section class="section reviews__section">
+      <section data-sidemenu-theme="dark--red" data-section-id="reviews" class="section reviews__section">
         <div class="container reviews__container">
           <h2 class="h2 section__title">отзывы</h2>
           <div class="reviews">
@@ -642,14 +657,14 @@
           </div>
         </div>
       </section>
-      <section class="section player-section">
+      <section data-sidemenu-theme="dark--red" data-section-id="player" class="section player-section">
         <div class="container">
           <h2 class="section__title">Как мы работаем</h2>
           <div class="player-section__container">
             <div class="player">
               <div class="player__wrapper">
-                <div id="yt-player"  class="player__elem"></div>
-              <div class="player__splash"></div>
+                <div id="yt-player" class="player__elem"></div>
+                <div class="player__splash"></div>
               </div>
               <div class="player__controls">
                 <button class="player__start">
@@ -679,8 +694,7 @@
           </div>
         </div>
       </section>
-      
-      <section class="section delivery__section">
+      <section data-sidemenu-theme="dark--white" data-section-id="delivery" class="section delivery__section">
         <div class="container">
           <h2 class="h2 section__title section__title--delivery">закажите доставку</h2>
           <form class="form" id="form">
@@ -755,71 +769,72 @@
           </form>
         </div>
       </section>
-      <section class="section map__section">
+      <section data-sidemenu-theme="dark--red" data-section-id="map" class="section map__section">
         <div class="map" id="map"></div>
+        <footer class="footer">
+          <div class="container footer__container">
+            <div class="footer__col">
+              <address class="contacts">
+                <p class="cotnacts__address">Москва, ул.Новый Арбат, д.31/12</p>
+                <a href="tel:+78009039090" class="contacts__phone contacts__phone--footer">
+                  <span class="contact__phone-icon">
+                    <svg class="phone__icon">
+                      <use xlink:href="./img/sprite.svg#phone__icon"></use>
+                    </svg>
+                  </span>
+                  <span class="contact__phone-number">8 800 903 90 90</span>
+                </a>
+              </address>
+            </div>
+            <div class="footer__col">
+              <ul class="social__list">
+                <li class="social__item">
+                  <a href="#" class="social__link">
+                    <svg class="social__icon">
+                      <use xlink:href="./img/sprite.svg#vk"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="social__item">
+                  <a href="#" class="social__link">
+                    <svg class="social__icon">
+                      <use xlink:href="./img/sprite.svg#f"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="social__item">
+                  <a href="#" class="social__link">
+                    <svg class="social__icon">
+                      <use xlink:href="./img/sprite.svg#in"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="social__item">
+                  <a href="#" class="social__link">
+                    <svg class="social__icon">
+                      <use xlink:href="./img/sprite.svg#tg"></use>
+                    </svg>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </footer>
       </section>
     </main>
-    <footer class="footer">
-      <div class="container footer__container">
-        <div class="footer__col">
-          <address class="contacts">
-            <p class="cotnacts__address">Москва, ул.Новый Арбат, д.31/12</p>
-            <a href="tel:+78009039090" class="contacts__phone contacts__phone--footer">
-              <span class="contact__phone-icon">
-                <svg class="phone__icon">
-                  <use xlink:href="./img/sprite.svg#phone__icon"></use>
-                </svg>
-              </span>
-              <span class="contact__phone-number">8 800 903 90 90</span>
-            </a>
-          </address>
-        </div>
-        <div class="footer__col">
-          <ul class="social__list">
-            <li class="social__item">
-              <a href="http://" class="social__link">
-                <svg class="social__icon">
-                  <use xlink:href="./img/sprite.svg#vk"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="social__item">
-              <a href="http://" class="social__link">
-                <svg class="social__icon">
-                  <use xlink:href="./img/sprite.svg#f"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="social__item">
-              <a href="http://" class="social__link">
-                <svg class="social__icon">
-                  <use xlink:href="./img/sprite.svg#in"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="social__item">
-              <a href="http://" class="social__link">
-                <svg class="social__icon">
-                  <use xlink:href="./img/sprite.svg#tg"></use>
-                </svg>
-              </a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </footer>
   </div>
   <nav class="fixed-menu">
     <ul class="fixed-menu__list">
-      <li class="fixed-menu__item fixed-menu__item--active"><a href="http://" class="fixed-menu__link"></a></li>
-      <li class="fixed-menu__item"><a href="http://" class="fixed-menu__link"></a></li>
-      <li class="fixed-menu__item"><a href="http://" class="fixed-menu__link"></a></li>
-      <li class="fixed-menu__item"><a href="http://" class="fixed-menu__link"></a></li>
-      <li class="fixed-menu__item"><a href="http://" class="fixed-menu__link"></a></li>
-      <li class="fixed-menu__item"><a href="http://" class="fixed-menu__link"></a></li>
-      <li class="fixed-menu__item"><a href="http://" class="fixed-menu__link"></a></li>
-      <li class="fixed-menu__item"><a href="http://" class="fixed-menu__link"></a></li>
-      <li class="fixed-menu__item"><a href="http://" class="fixed-menu__link"></a></li>
+      <li class="fixed-menu__item fixed-menu__item--active"><a href="#" data-scroll-to="hello"
+          class="fixed-menu__link"></a></li>
+      <li class="fixed-menu__item"><a href="#" data-scroll-to="benefits" class="fixed-menu__link"></a></li>
+      <li class="fixed-menu__item"><a href="#" data-scroll-to="slider" class="fixed-menu__link"></a></li>
+      <li class="fixed-menu__item"><a href="#" data-scroll-to="team" class="fixed-menu__link"></a></li>
+      <li class="fixed-menu__item"><a href="#" data-scroll-to="products" class="fixed-menu__link"></a></li>
+      <li class="fixed-menu__item"><a href="#" data-scroll-to="reviews" class="fixed-menu__link"></a></li>
+      <li class="fixed-menu__item"><a href="#" data-scroll-to="player" class="fixed-menu__link"></a></li>
+      <li class="fixed-menu__item"><a href="#" data-scroll-to="delivery" class="fixed-menu__link"></a></li>
+      <li class="fixed-menu__item"><a href="#" data-scroll-to="map" class="fixed-menu__link"></a></li>
     </ul>
   </nav>
   <div class="hamburger__menu">
@@ -830,13 +845,13 @@
         </svg>
       </div>
       <ul class="hamburger__menu-list">
-        <li class="menu__item"><a href="#" class="menu__link">О нас</a></li>
-        <li class="menu__item"><a href="#" class="menu__link">Наушники</a></li>
-        <li class="menu__item"><a href="#" class="menu__link">Команда</a></li>
-        <li class="menu__item"><a href="#" class="menu__link">Цвета</a></li>
-        <li class="menu__item"><a href="#" class="menu__link">Отзывы</a></li>
-        <li class="menu__item"><a href="#" class="menu__link">Как мы работаем</a></li>
-        <li class="menu__item"><a href="#" class="menu__link">Контакты </a></li>
+        <li class="menu__item"><a href="#" data-scroll-to="benefits" class="menu__link">О нас</a></li>
+        <li class="menu__item"><a href="#" data-scroll-to="slider" class="menu__link">Наушники</a></li>
+        <li class="menu__item"><a href="#" data-scroll-to="team" class="menu__link">Команда</a></li>
+        <li class="menu__item"><a href="#" data-scroll-to="products" class="menu__link">Цвета</a></li>
+        <li class="menu__item"><a href="#" data-scroll-to="reviews" class="menu__link">Отзывы</a></li>
+        <li class="menu__item"><a href="#" data-scroll-to="player" class="menu__link">Как мы работаем</a></li>
+        <li class="menu__item"><a href="#" data-scroll-to="map" class="menu__link">Контакты </a></li>
       </ul>
     </div>
   </div>
@@ -844,6 +859,10 @@
   <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
   <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
   <script src="https://www.youtube.com/iframe_api"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.19/jquery.touchSwipe.min.js"
+    integrity="sha512-YYiD5ZhmJ0GCdJvx6Xe6HzHqHvMpJEPomXwPbsgcpMFPW+mQEeVBU6l9n+2Y+naq+CLbujk91vHyN18q6/RSYw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mobile-detect/1.4.5/mobile-detect.min.js"></script>
   <script src="./js/main.js"></script>
 </body>
 

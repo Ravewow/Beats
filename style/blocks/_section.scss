@@ -1,5 +1,5 @@
 .section {
-  height: 100vh;
+  height: 100%;
   min-height: 40.625rem;
   display: flex;
   flex-direction: column;
@@ -17,6 +17,7 @@
   text-align: center;
 
   @include phones {
+    margin-top: 37px;
     font-size: 32px;
     line-height: 36px;
   }
