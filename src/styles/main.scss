@@ -1,0 +1,11 @@
+$containerWidth: 940px;
+$baseFontSize: 16px;
+
+//breakpoints
+$tablets: 768px;
+$phones: 480px;
+
+@import "../styles/media";
+@import "../styles/base";
+@import "../styles/block/header";
+@import "../styles/block/hello"
