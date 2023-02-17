@@ -6,6 +6,22 @@ $tablets: 768px;
 $phones: 480px;
 
 @import "../styles/media";
-@import "../styles/base";
-@import "../styles/block/header";
-@import "../styles/block/hello"
+@import "./base";
+@import "./blocks/header";
+@import "./blocks/hello";
+@import "./buttons";
+@import "./blocks/section";
+@import "./benefit";
+@import "./blocks/_reviews";
+@import "./interactive-avatar";
+@import "./blocks/delivery";
+@import "./radiobutton";
+@import "./fixed-menu";
+@import "./humburger";
+@import "./blocks/map";
+@import "./blocks/footer";
+@import "./blocks/slider";
+@import "./dropdown";
+@import "./blocks/team";
+@import "./blocks/products";
+@import "./blocks/player";

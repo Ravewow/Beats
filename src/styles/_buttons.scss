@@ -1,0 +1,38 @@
+.button {
+  padding: 1.125rem 2.56rem;
+  background: #e01f3d;
+  border-radius: 6.25rem;
+  color: #fff;
+  font-family: "Play";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  border: none;
+  transition: 0.5s;
+
+  @include phones {
+    text-align: center;
+    max-width: 12rem;
+    max-height: rem(65px);
+    flex: 1;
+  }
+
+  &:hover {
+    background: #CA1B36;
+  }
+
+  &--transparent {
+    background: transparent;
+    padding: 0;
+    margin-left: 1rem;
+
+    @include phones {
+      width: auto;
+    }
+    
+    &:hover {
+      background: transparent;
+      color: #000000;
+    }
+  }
+}

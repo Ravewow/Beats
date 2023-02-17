@@ -1,0 +1,92 @@
+header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.logo {
+  flex-shrink: 0;
+
+  &-icon {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+.menu {
+  margin: 0 30px;
+  padding-top: 5px;
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    @include tablets {
+      display: none;
+    }
+  }
+
+  &__item {
+    font-family: "Alegreya Sans";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 30px;
+    color: #292929;
+    margin-right: 30px;
+    margin-bottom: 5px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  &__link {
+    white-space: nowrap;
+  }
+}
+
+.contacts__phone {
+  display: flex;
+  align-items: center;
+  font-family: "Play";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 18px;
+  white-space: nowrap;
+  padding: 10px 0;
+  transition: 0.5s;
+
+  &:hover {
+    color: #E01F3D;
+    transition: 0.5s;
+    .phone__icon {
+      fill: #E01F3D;
+    }
+  }
+
+  &--header {
+    @include tablets {
+      display: none;
+    }
+  }
+}
+
+
+.contact__phone-icon {
+  flex-shrink: 0;
+}
+
+.phone__icon {
+  max-width: 14px;
+  max-height: 14px;
+  margin-right: 6px;
+  transition: 0.5s;
+}
+
+.header__humburger-item {
+  width: 26px;
+  height: 24px;
+}

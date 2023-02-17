@@ -1,0 +1,68 @@
+.footer__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: rem(86px);
+
+  @include tablets {
+    height: 7rem;
+  }
+
+  @include phones {
+    flex-direction: column;
+    height: rem(151px);
+    justify-content: center;
+  }
+}
+
+.footer {
+ 
+  background: #fff;
+
+  @include phones {
+    padding-top: 20px;
+    padding-bottom: 31px;
+  }
+}
+
+.social__list {
+  display: flex;
+}
+
+.social__item {
+  margin-right: 0.5rem;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.social__icon {
+  width: 30px;
+  height: 30px;
+  fill: #b3b3b3;
+  transition: 0.5s;
+
+  &:hover {
+    fill: #000;
+  }
+}
+
+.cotnacts__address {
+  font-family: "Play";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 24px;
+
+  @include phones {
+    margin-bottom: 12px;
+  }
+}
+
+.contacts__phone--footer {
+  @include phones {
+    justify-content: center;
+    margin-bottom: 19px;
+  }
+}

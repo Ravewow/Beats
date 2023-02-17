@@ -1,0 +1,95 @@
+.section {
+  height: 100%;
+  min-height: 40.625rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+}
+
+.section__title {
+  font-family: "Play";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 52px;
+  text-transform: uppercase;
+  text-align: center;
+
+  @include phones {
+    margin-top: 37px;
+    font-size: 32px;
+    line-height: 36px;
+  }
+}
+
+.headline {
+  text-align: center;
+
+  &__title {
+    margin-bottom: 1.125rem;
+  }
+
+  &__subtitle {
+    padding: 0 20%;
+    font-family: "Play";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    color: #666666;
+
+    @include phones {
+      padding: 0;
+      margin-top: 5px;
+    }
+  }
+}
+
+.benefits {
+  display: flex;
+
+  @include phones {
+    flex-direction: column;
+  }
+
+  &__item {
+    flex: 1;
+    margin-top: 3.875rem;
+    padding-right: 3%;
+    position: relative;
+
+    @include phones {
+      padding-right: 0;
+    }
+
+    &::before {
+      content: url("img/decor/sep.png");
+      position: absolute;
+      top: 3.125rem;
+      right: 0;
+      transform: translateX(30%);
+
+      @include tablets {
+        display: none;
+      }
+    }
+
+    &:last-child {
+      padding-right: 0;
+
+      &::before {
+        display: none;
+      }
+    }
+  }
+}
+
+.section__decor--triangle {
+  &::after {
+    content: url("img/decor/triangle.png");
+    position: absolute;
+    bottom: -1.625rem;
+    left: 20.5%;
+  }
+}

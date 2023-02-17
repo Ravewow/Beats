@@ -1,0 +1,111 @@
+.team--version--desktop {
+  display: flex;
+
+  @include tablets {
+    display: none;
+  }
+}
+
+.team__title-item {
+  margin-bottom: rem(53px);
+}
+
+.portfolio {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: rem(220px);
+  margin-right: rem(20px);
+  flex-wrap: wrap;
+  position: relative;
+
+  @include tablets {
+    margin-right: 0;
+  }
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  &__img-wrapper {
+    margin-bottom: rem(25px);
+
+    @include tablets {
+      margin-right: 0;
+      display: flex;
+      justify-content: center;
+    }
+  }
+
+  &__description {
+    height: 0;
+    overflow: hidden;
+    top: 100%;
+    transition: 0.4s;
+
+    @include tablets {
+      margin-bottom: rem(14px);
+    }
+  }
+
+  &__name {
+    font-family: "Play";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 21px;
+    color: #292929;
+    margin-bottom: rem(11px);
+    cursor: pointer;
+  }
+
+  &__career {
+    font-family: "Play";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    color: #292929;
+    text-align: center;
+    margin-bottom: rem(4px);
+  }
+
+  &__info {
+    font-family: "Play";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+    color: #666666;
+  }
+}
+
+.portfolio__name-wrapper {
+  display: flex;
+  align-items: baseline;
+}
+
+.portfolio__name-triangle {
+  width: 9px;
+  height: 7px;
+  margin-left: 4px;
+}
+
+.portfolio__name-triangle--rotate {
+  transform: rotate(180deg);
+}
+
+.team--version--mobile {
+  display: none;
+
+  @include tablets {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.team--version--desktop .portfolio__description {
+  position: absolute;
+}
