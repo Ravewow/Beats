@@ -3,12 +3,13 @@
 const hamburgerMenu = document.querySelector(".hamburger__menu");
 const closeMenu = document.querySelector(".humburger__header-icon");
 const headerHamburger = document.querySelector(".header__humburger-item");
+const closeMenuClick = document.querySelector(".menu__item");
 
-headerHamburger.addEventListener("click", (e) => {
+headerHamburger.addEventListener("click", () => {
   hamburgerMenu.classList.add("hamburger__visible");
 });
 
-closeMenu.addEventListener("click", (e) => {
+closeMenuClick.addEventListener("click", () => {
   hamburgerMenu.classList.remove("hamburger__visible");
 });
 
@@ -16,8 +17,11 @@ headerHamburger.addEventListener("click", (e) => {
   e.preventDefault();
 });
 
-// slider
+$(".hamburger__menu-item").on("click", function (e) {
+  $(".hamburger__menu").removeClass("hamburger__visible");
+});
 
+// slider
 
 const slider = $(".slider__list").bxSlider({
   pager: false,

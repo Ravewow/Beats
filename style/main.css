@@ -607,7 +607,7 @@ header {
   position: relative;
 }
 .reviews__section::before {
-  content: url("/Beats/img/decor/radial.png");
+  content: url("./img/decor/radial.png");
   position: absolute;
   bottom: -1.62rem;
   left: 22%;
@@ -793,7 +793,7 @@ header {
 }
 
 .delivery__section {
-  background: url("/Beats/img/section__delivery/bg.png") center bottom/100% no-repeat, #181818;
+  background: url("./img/section__delivery/bg.png") center bottom/100% no-repeat, #181818;
   color: #fff;
 }
 
@@ -1029,7 +1029,7 @@ header {
   border-radius: 4px;
 }
 .radio--checkbox .radio__visible::before {
-  background: url("/Beats/img/decor/check.svg") center center no-repeat;
+  background: url("./img/decor/check.svg") center center no-repeat;
 }
 
 .radio__elem {
@@ -1960,7 +1960,7 @@ header {
   left: 0;
   right: 0;
   bottom: 0;
-  background: url("/Beats/img/section__player/splashscreen.png") center center/cover no-repeat;
+  background: url("./img/section__player/splashscreen.png") center center/cover no-repeat;
   cursor: pointer;
 }
 
